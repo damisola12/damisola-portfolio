@@ -4,15 +4,8 @@ import {
   Check,
   ChevronDown,
   ExternalLink,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
   Menu,
-  Phone,
-  Send,
   X,
-  Youtube,
 } from 'lucide-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
@@ -60,7 +53,7 @@ function Header() {
             </a>
           ))}
         </nav>
-        <a href="#contact" className="hidden items-center gap-2 border-b border-[#c9a76a] pb-1 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#f5f0e6] transition-colors hover:text-[#d9b979] sm:flex" data-testid="link-header-contact">
+        <a href={`mailto:${siteContent.contact.email}`} className="hidden items-center gap-2 border-b border-[#c9a76a] pb-1 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#f5f0e6] transition-colors hover:text-[#d9b979] sm:flex" data-testid="link-header-email">
           Start a conversation <ArrowUpRight size={13} strokeWidth={1.5} />
         </a>
         <button type="button" onClick={() => setOpen(!open)} className="rounded-sm p-2 lg:hidden" aria-label={open ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={open} data-testid="button-menu">
@@ -107,7 +100,7 @@ function Hero() {
             <a href="#work" className="group inline-flex items-center gap-3 border border-[#d9b979] bg-[#d9b979] px-5 py-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#102e29] transition-colors hover:bg-transparent hover:text-[#f5f0e6]" data-testid="link-explore-work">
               Explore my work <ArrowUpRight size={15} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
-            <a href="#contact" className="inline-flex items-center gap-3 border-b border-[#f5f0e6]/50 pb-2 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#f5f0e6] transition-colors hover:border-[#d9b979] hover:text-[#d9b979]" data-testid="link-hero-contact">
+            <a href={`mailto:${siteContent.contact.email}`} className="inline-flex items-center gap-3 border-b border-[#f5f0e6]/50 pb-2 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#f5f0e6] transition-colors hover:border-[#d9b979] hover:text-[#d9b979]" data-testid="link-hero-email">
               Get in touch <ArrowUpRight size={15} strokeWidth={1.5} />
             </a>
           </div>
@@ -251,7 +244,7 @@ function CreativeWork() {
         </div>
         <div className="mt-20 flex items-center justify-between border-t border-[#f5f0e6]/15 pt-5">
           <span className="eyebrow text-[#d6d0c4]/60">More stories are taking shape</span>
-          <a href="#contact" className="group inline-flex items-center gap-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] hover:text-[#f5f0e6]" data-testid="link-creative-contact">Talk about a project <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
+           <a href={`mailto:${siteContent.contact.email}`} className="group inline-flex items-center gap-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] hover:text-[#f5f0e6]" data-testid="link-creative-email">Talk about a project <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
         </div>
       </div>
       {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
@@ -278,7 +271,7 @@ function Ventures() {
             <div className="mt-9 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
               {siteContent.ventures.delta.cards.map((card) => <div key={card} className="border-l-2 border-[#c9a76a] pl-3 text-sm text-[#183c34]">{card}</div>)}
             </div>
-            <a href={siteContent.ventures.delta.link} className="mt-10 inline-flex items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-delta-arts">Visit Delta Arts <ExternalLink size={13} /></a>
+             <a href={siteContent.ventures.delta.link} className="mt-10 inline-flex items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-delta-arts">Ask about Delta Arts <ExternalLink size={13} /></a>
           </article>
           <article className="relative overflow-hidden bg-[#e7dfcf] px-6 py-10 lg:px-14 lg:py-14">
             <div className="absolute -right-10 -top-16 font-display text-[15rem] leading-none text-[#d0c3aa]/40">N</div>
@@ -318,7 +311,7 @@ function Podcast() {
             <p className="eyebrow text-[#d9b979]">The show</p>
             <h3 className="mt-4 max-w-2xl font-display text-4xl leading-[.98] text-[#f5f0e6] sm:text-6xl">{siteContent.podcast.tagline}</h3>
             <p className="mt-6 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#d6d0c4]/65">{siteContent.podcast.host}</p>
-            <a href={siteContent.podcast.link} className="mt-9 inline-flex items-center gap-2 border-b border-[#d9b979] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] transition-colors hover:text-[#f5f0e6]" data-testid="link-podcast">Visit the podcast <ExternalLink size={13} /></a>
+            <a href={siteContent.podcast.link} className="mt-9 inline-flex items-center gap-2 border-b border-[#d9b979] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] transition-colors hover:text-[#f5f0e6]" data-testid="link-podcast">Talk about the podcast <ExternalLink size={13} /></a>
             <div className="mt-16 border-t border-[#f5f0e6]/20">
               <div className="flex items-center justify-between border-b border-[#f5f0e6]/20 py-5">
                 <p className="eyebrow text-[#d6d0c4]/60">Conversations to come</p>
@@ -396,63 +389,6 @@ function Leisure() {
   );
 }
 
-function Contact() {
-  const [sent, setSent] = useState(false);
-  const submit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setSent(true);
-    event.currentTarget.reset();
-  };
-  return (
-    <section id="contact" className="bg-[#102e29] py-24 text-[#f5f0e6] sm:py-32">
-      <div className="section-wrap">
-        <SectionIntro number="10" label="Say hello" title="Let’s make something." dark>
-          <p>Have a story, project, opportunity or idea worth discussing? I’d like to hear it.</p>
-        </SectionIntro>
-        <div className="grid gap-16 lg:grid-cols-[.72fr_1.28fr] lg:gap-24">
-          <div>
-            <div className="space-y-5 border-t border-[#f5f0e6]/20 pt-5">
-              <a href={`mailto:${siteContent.contact.email}`} className="flex items-center gap-3 font-display text-2xl text-[#f5f0e6] hover:text-[#d9b979]" data-testid="link-email"><Mail size={18} className="text-[#d9b979]" strokeWidth={1.5} />{siteContent.contact.email}</a>
-              <p className="flex items-center gap-3 font-mono-custom text-xs text-[#d6d0c4]/70"><Phone size={16} className="text-[#d9b979]" strokeWidth={1.5} />{siteContent.contact.phone}</p>
-              <p className="flex items-center gap-3 font-mono-custom text-xs text-[#d6d0c4]/70"><MapPin size={16} className="text-[#d9b979]" strokeWidth={1.5} />{siteContent.location}</p>
-            </div>
-            <div className="mt-12 border-t border-[#f5f0e6]/20 pt-5">
-              <p className="eyebrow text-[#d6d0c4]/60">Elsewhere</p>
-              <div className="mt-5 flex gap-4">
-                <a href={siteContent.contact.linkedin} aria-label="LinkedIn placeholder link" className="text-[#d6d0c4]/70 hover:text-[#d9b979]" data-testid="link-linkedin"><Linkedin size={18} strokeWidth={1.5} /></a>
-                <a href={siteContent.contact.instagram} aria-label="Instagram placeholder link" className="text-[#d6d0c4]/70 hover:text-[#d9b979]" data-testid="link-instagram"><Instagram size={18} strokeWidth={1.5} /></a>
-                <a href={siteContent.contact.x} aria-label="X placeholder link" className="font-mono-custom text-sm text-[#d6d0c4]/70 hover:text-[#d9b979]" data-testid="link-x">X</a>
-                <a href={siteContent.contact.youtube} aria-label="YouTube placeholder link" className="text-[#d6d0c4]/70 hover:text-[#d9b979]" data-testid="link-youtube"><Youtube size={18} strokeWidth={1.5} /></a>
-              </div>
-            </div>
-          </div>
-          <div>
-            {sent ? (
-              <div className="border border-[#d9b979] p-8 sm:p-12" role="status" data-testid="status-contact-success">
-                <Check size={26} className="text-[#d9b979]" strokeWidth={1.5} />
-                <h3 className="mt-7 font-display text-4xl">Message received.</h3>
-                <p className="mt-3 max-w-sm text-sm leading-6 text-[#d6d0c4]/75">This browser demo is ready to connect to Formspree, Resend or EmailJS. The form has not sent an email yet.</p>
-                <button type="button" onClick={() => setSent(false)} className="mt-8 border-b border-[#d9b979] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979]" data-testid="button-send-another">Send another</button>
-              </div>
-            ) : (
-              <form onSubmit={submit} className="space-y-7" data-testid="form-contact">
-                <div className="grid gap-7 sm:grid-cols-2">
-                  <label className="block"><span className="eyebrow text-[#d6d0c4]/60">Name</span><input required name="name" type="text" className="mt-3 w-full border-0 border-b border-[#f5f0e6]/30 bg-transparent px-0 py-3 text-base text-[#f5f0e6] outline-none placeholder:text-[#d6d0c4]/35 focus:border-[#d9b979]" placeholder="Your name" data-testid="input-name" /></label>
-                  <label className="block"><span className="eyebrow text-[#d6d0c4]/60">Email</span><input required name="email" type="email" className="mt-3 w-full border-0 border-b border-[#f5f0e6]/30 bg-transparent px-0 py-3 text-base text-[#f5f0e6] outline-none placeholder:text-[#d6d0c4]/35 focus:border-[#d9b979]" placeholder="you@example.com" data-testid="input-email" /></label>
-                </div>
-                <label className="block"><span className="eyebrow text-[#d6d0c4]/60">Subject</span><input required name="subject" type="text" className="mt-3 w-full border-0 border-b border-[#f5f0e6]/30 bg-transparent px-0 py-3 text-base text-[#f5f0e6] outline-none placeholder:text-[#d6d0c4]/35 focus:border-[#d9b979]" placeholder="What shall we make?" data-testid="input-subject" /></label>
-                <label className="block"><span className="eyebrow text-[#d6d0c4]/60">Message</span><textarea required name="message" rows={4} className="mt-3 w-full resize-none border-0 border-b border-[#f5f0e6]/30 bg-transparent px-0 py-3 text-base text-[#f5f0e6] outline-none placeholder:text-[#d6d0c4]/35 focus:border-[#d9b979]" placeholder="Tell me a little about it..." data-testid="input-message" /></label>
-                <button type="submit" className="group inline-flex items-center gap-3 bg-[#d9b979] px-6 py-3.5 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#102e29] transition-colors hover:bg-[#f5f0e6]" data-testid="button-submit-contact">Send message <Send size={15} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" /></button>
-                <p className="font-mono-custom text-[10px] leading-5 tracking-[0.06em] text-[#d6d0c4]/50">Browser-only demo. Connect this form to your preferred email service when ready.</p>
-              </form>
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function AppContent() {
   useReveal();
   useEffect(() => {
@@ -507,12 +443,26 @@ function AppContent() {
             </div>
           </div>
         </section>
-        <Contact />
       </main>
       <footer className="bg-[#102e29] px-5 pb-8 text-[#f5f0e6] sm:px-10">
         <div className="mx-auto flex max-w-[78rem] flex-col gap-7 border-t border-[#f5f0e6]/20 pt-7 sm:flex-row sm:items-end sm:justify-between">
-          <div><p className="font-display text-2xl">Oluwadamisola Adeyinka<span className="text-[#d9b979]">.</span></p><p className="mt-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d6d0c4]/60">Writer. Filmmaker. Producer. Creative.</p></div>
-          <div className="flex flex-col gap-2 sm:items-end"><p className="font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/60">Made with stories, curiosity and a little stubbornness.</p><p className="font-mono-custom text-[10px] text-[#d6d0c4]/40">© {new Date().getFullYear()} Oluwadamisola Adeyinka</p></div>
+          <div>
+            <p className="font-display text-2xl">Oluwadamisola Adeyinka<span className="text-[#d9b979]">.</span></p>
+            <p className="mt-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d6d0c4]/60">Writer. Filmmaker. Producer. Creative.</p>
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/65">
+              <a href={`mailto:${siteContent.contact.email}`} className="transition-colors hover:text-[#d9b979]" data-testid="footer-email">{siteContent.contact.email}</a>
+              <a href={`tel:${siteContent.contact.phone}`} className="transition-colors hover:text-[#d9b979]" data-testid="footer-phone">{siteContent.contact.phone}</a>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 sm:items-end">
+            <div className="flex flex-wrap gap-4 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/65">
+              <a href={siteContent.contact.linkedin} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#d9b979]" data-testid="footer-linkedin">LinkedIn</a>
+              <a href={siteContent.contact.instagram} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#d9b979]" data-testid="footer-instagram">Instagram</a>
+              <a href={siteContent.contact.youtube} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#d9b979]" data-testid="footer-youtube">YouTube</a>
+            </div>
+            <p className="font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/60">Made with stories, curiosity and a little stubbornness.</p>
+            <p className="font-mono-custom text-[10px] text-[#d6d0c4]/40">© {new Date().getFullYear()} Oluwadamisola Adeyinka</p>
+          </div>
         </div>
       </footer>
     </div>

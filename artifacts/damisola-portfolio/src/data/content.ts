@@ -35,8 +35,8 @@ export const siteContent = {
     { id: 'greenlight', title: 'Greenlight', year: '—', medium: 'Film Project', role: 'Writer / Producer', description: 'A film project in development.', image: heroImage, details: 'Editable project notes, collaborators and link can be added here when ready.' },
   ],
   ventures: {
-    delta: { title: 'Delta Arts Entertainment', tagline: 'Original. Creative. Excellent.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', link: '#contact', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
-    nollyfi: { title: 'Nollyfi', tagline: 'Nollyfi-ing all limits to creativity.', copy: 'A creative platform designed to help creative ideas move from validation to production and promotion.', link: '#contact' },
+    delta: { title: 'Delta Arts Entertainment', tagline: 'Original. Creative. Excellent.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', link: 'mailto:adeyinkadamisola@gmail.com', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
+    nollyfi: { title: 'Nollyfi', tagline: 'Nollyfi-ing all limits to creativity.', copy: 'A creative platform designed to help creative ideas move from validation to production and promotion.', link: 'mailto:adeyinkadamisola@gmail.com' },
   },
   podcast: {
     title: 'Dam and People Talk Relationship',
@@ -45,7 +45,7 @@ export const siteContent = {
     copy: 'A podcast platform where curiosity becomes conversation. Dam and People Talk Relationship is a major part of my creative journey — a space for exploring how people meet, grow, disagree, love and make meaning together.',
     host: 'Hosted by Oluwadamisola Adeyinka',
     image: peopleImage,
-    link: '#contact', // Replace with the live podcast or listening-platform URL.
+    link: 'mailto:adeyinkadamisola@gmail.com', // Replace with the live podcast or listening-platform URL.
     episodes: [
       { number: '01', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
       { number: '02', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
@@ -80,9 +80,15 @@ export const siteContent = {
     { value: '90%+', label: 'Audience satisfaction from selected productions' },
   ],
   testimonials: [{ quote: 'Add testimonial here.', name: 'Name to be added', role: 'Role to be added', organisation: 'Organisation to be added' }],
-  contact: { email: 'your@email.com', phone: 'Phone number to be added', linkedin: 'https://linkedin.com/in/yourname', instagram: 'Instagram link to be added', x: 'X link to be added', youtube: 'YouTube link to be added' },
+  contact: {
+    email: 'adeyinkadamisola@gmail.com',
+    phone: '+2348101344189',
+    linkedin: 'https://www.linkedin.com/in/oluwadamisola-adeyinka/',
+    instagram: 'https://www.instagram.com/delta.writer/',
+    youtube: 'https://www.youtube.com/@delta.writer',
+  },
 };
 
 export const navigation = [
-  ['About', '#about'], ['Work', '#work'], ['Creative', '#creative'], ['Podcast', '#podcast'], ['Experience', '#experience'], ['Projects', '#projects'], ['Leisure', '#leisure'], ['Contact', '#contact'],
+  ['About', '#about'], ['Work', '#work'], ['Creative', '#creative'], ['Podcast', '#podcast'], ['Experience', '#experience'], ['Projects', '#projects'], ['Leisure', '#leisure'],
 ] as const;
