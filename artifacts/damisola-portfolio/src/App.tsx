@@ -299,11 +299,54 @@ function Ventures() {
   );
 }
 
+function Podcast() {
+  return (
+    <section id="podcast" className="bg-[#102e29] py-24 text-[#f5f0e6] sm:py-32">
+      <div className="section-wrap">
+        <SectionIntro number="05" label="The conversations" title={siteContent.podcast.title} dark>
+          <p>{siteContent.podcast.copy}</p>
+        </SectionIntro>
+        <div className="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-24">
+          <div className="reveal">
+            <div className="relative">
+              <div className="absolute -right-4 -top-4 h-24 w-24 border-r border-t border-[#c9a76a]" />
+              <img src={siteContent.podcast.image} alt="Oluwadamisola with a group of people, representing the conversations behind Dam and People Talk Relationship" loading="lazy" className="relative aspect-[4/5] w-full object-cover" data-testid="img-podcast" />
+            </div>
+            <p className="mt-5 max-w-xs font-mono-custom text-[10px] uppercase leading-5 tracking-[0.12em] text-[#d6d0c4]/65">A listening space for the people, questions and relationships that stay with us.</p>
+          </div>
+          <div className="reveal reveal-delay-1">
+            <p className="eyebrow text-[#d9b979]">The show</p>
+            <h3 className="mt-4 max-w-2xl font-display text-4xl leading-[.98] text-[#f5f0e6] sm:text-6xl">{siteContent.podcast.tagline}</h3>
+            <p className="mt-6 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#d6d0c4]/65">{siteContent.podcast.host}</p>
+            <a href={siteContent.podcast.link} className="mt-9 inline-flex items-center gap-2 border-b border-[#d9b979] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] transition-colors hover:text-[#f5f0e6]" data-testid="link-podcast">Visit the podcast <ExternalLink size={13} /></a>
+            <div className="mt-16 border-t border-[#f5f0e6]/20">
+              <div className="flex items-center justify-between border-b border-[#f5f0e6]/20 py-5">
+                <p className="eyebrow text-[#d6d0c4]/60">Conversations to come</p>
+                <span className="font-mono-custom text-[10px] text-[#d9b979]">01—03</span>
+              </div>
+              {siteContent.podcast.episodes.map((episode) => (
+                <div key={episode.number} className="grid gap-3 border-b border-[#f5f0e6]/15 py-5 sm:grid-cols-[50px_1fr] sm:gap-7">
+                  <span className="font-mono-custom text-[10px] text-[#d9b979]">{episode.number}</span>
+                  <div>
+                    <h4 className="font-display text-2xl text-[#f5f0e6]">{episode.title}</h4>
+                    <p className="mt-1 text-sm leading-6 text-[#d6d0c4]/65">{episode.copy}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 font-mono-custom text-[10px] uppercase leading-5 tracking-[0.1em] text-[#d6d0c4]/45">Podcast artwork, listening links and episode archive can be updated in the editable content file.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Experience() {
   return (
     <section id="experience" className="bg-[#e7dfcf] py-24 sm:py-32">
       <div className="section-wrap">
-        <SectionIntro number="05" label="Professional life" title="The work behind the work">
+        <SectionIntro number="06" label="Professional life" title="The work behind the work">
           <p>Different titles, same instinct: notice what people need, bring order to the moving parts, and help good work reach the people it is for.</p>
         </SectionIntro>
         <div className="border-t border-[#183c34]/20">
@@ -336,7 +379,7 @@ function Leisure() {
   return (
     <section id="leisure" className="bg-[#f5f0e6] py-24 sm:py-32">
       <div className="section-wrap">
-        <SectionIntro number="06" label="Beyond the brief" title="When I’m not working">
+        <SectionIntro number="07" label="Beyond the brief" title="When I’m not working">
           <p>There is a life around the work: music in the background, long conversations, new places, familiar faces and the small details that become stories later.</p>
         </SectionIntro>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -363,7 +406,7 @@ function Contact() {
   return (
     <section id="contact" className="bg-[#102e29] py-24 text-[#f5f0e6] sm:py-32">
       <div className="section-wrap">
-        <SectionIntro number="07" label="Say hello" title="Let’s make something." dark>
+        <SectionIntro number="10" label="Say hello" title="Let’s make something." dark>
           <p>Have a story, project, opportunity or idea worth discussing? I’d like to hear it.</p>
         </SectionIntro>
         <div className="grid gap-16 lg:grid-cols-[.72fr_1.28fr] lg:gap-24">
@@ -414,7 +457,7 @@ function AppContent() {
   useReveal();
   useEffect(() => {
     document.title = 'Oluwadamisola Adeyinka | Writer, Filmmaker & Producer';
-    const description = 'The personal portfolio of Oluwadamisola Adeyinka — writer, filmmaker, producer, creative professional and storyteller based in Lagos, Nigeria.';
+    const description = 'The personal portfolio of Oluwadamisola Adeyinka — writer, filmmaker, producer, podcast host, creative professional and storyteller based in Lagos, Nigeria.';
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) { meta = document.createElement('meta'); meta.setAttribute('name', 'description'); document.head.appendChild(meta); }
     meta.setAttribute('content', description);
@@ -438,6 +481,7 @@ function AppContent() {
         <Journey />
         <CreativeWork />
         <Ventures />
+          <Podcast />
         <Experience />
         <Leisure />
         <section className="bg-[#e7dfcf] py-24 sm:py-32">

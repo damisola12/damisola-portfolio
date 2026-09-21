@@ -23,7 +23,8 @@ export const siteContent = {
     { label: 'Teaching', title: 'Chemistry / STEM education and Yoruba language teaching', copy: 'Making complex ideas feel human, clear and worth engaging with.' },
     { label: 'Customer Success', title: 'Digital tools, better operations', copy: 'Helping businesses and individuals adopt digital tools and improve how their work gets done.' },
     { label: 'Theatre', title: 'Writing, acting, directing and producing', copy: 'The room, the rehearsal, the live exchange — theatre taught me to listen closely.' },
-    { label: 'Film', title: 'Screenwriting, directing and production', copy: 'Building stories for the screen with care for both the idea and the people carrying it.' },
+      { label: 'Film', title: 'Screenwriting, directing and production', copy: 'Building stories for the screen with care for both the idea and the people carrying it.' },
+      { label: 'Podcast', title: 'Dam and People Talk Relationship', copy: 'Making room for honest conversations about people, connection and the relationships that shape our lives.' },
     { label: 'Entrepreneurship', title: 'Delta Arts Entertainment and Nollyfi', copy: 'Creating platforms and companies that help good ideas move.' },
   ],
   projects: [
@@ -36,6 +37,20 @@ export const siteContent = {
   ventures: {
     delta: { title: 'Delta Arts Entertainment', tagline: 'Original. Creative. Excellent.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', link: '#contact', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
     nollyfi: { title: 'Nollyfi', tagline: 'Nollyfi-ing all limits to creativity.', copy: 'A creative platform designed to help creative ideas move from validation to production and promotion.', link: '#contact' },
+  },
+  podcast: {
+    title: 'Dam and People Talk Relationship',
+    shortTitle: 'Dam & People',
+    tagline: 'Conversations about people, connection and the stories between us.',
+    copy: 'A podcast platform where curiosity becomes conversation. Dam and People Talk Relationship is a major part of my creative journey — a space for exploring how people meet, grow, disagree, love and make meaning together.',
+    host: 'Hosted by Oluwadamisola Adeyinka',
+    image: peopleImage,
+    link: '#contact', // Replace with the live podcast or listening-platform URL.
+    episodes: [
+      { number: '01', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
+      { number: '02', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
+      { number: '03', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
+    ],
   },
   experience: [
     { category: 'Customer Success & Business Operations', org: 'Editable organisation', role: 'Editable role', dates: 'Editable dates', copy: 'Experience helping businesses adopt digital tools, organise operations and solve practical problems.', achievements: ['Adoption and onboarding', 'Process improvement', 'People-centred problem solving'] },
@@ -69,5 +84,5 @@ export const siteContent = {
 };
 
 export const navigation = [
-  ['About', '#about'], ['Work', '#work'], ['Creative', '#creative'], ['Experience', '#experience'], ['Projects', '#projects'], ['Leisure', '#leisure'], ['Contact', '#contact'],
+  ['About', '#about'], ['Work', '#work'], ['Creative', '#creative'], ['Podcast', '#podcast'], ['Experience', '#experience'], ['Projects', '#projects'], ['Leisure', '#leisure'], ['Contact', '#contact'],
 ] as const;
