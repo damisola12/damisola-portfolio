@@ -64,12 +64,12 @@ export const siteContent = {
     Digital: ['Google Workspace', 'Notion', 'Calendly', 'Zoho Analytics', 'AI tools', 'Digital content production'],
   },
   leisure: [
-    { title: 'Music', copy: 'The right song can change the temperature of a room.', image: peopleImage },
-    { title: 'Movies & theatre', copy: 'Still watching closely. Still taking notes.', image: teachingImage },
-    { title: 'Conversations', copy: 'Especially the ones that go somewhere unexpected.', image: teamImage },
-    { title: 'Exploring Lagos', copy: 'Looking for the next corner, plate, story or view.', image: beachImage },
-    { title: 'People', copy: 'Time with good people is never time wasted.', image: peopleImage },
-    { title: 'Learning', copy: 'Keeping the beginner’s mind switched on.', image: heroImage },
+    { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: teachingImage, partner: 'With Precious Usuwa', featured: true },
+    { title: 'Movies & theatre', copy: 'Still watching closely. Still taking notes.', image: teachingImage, partner: undefined, featured: false },
+    { title: 'Conversations', copy: 'Especially the ones that go somewhere unexpected.', image: teamImage, partner: undefined, featured: false },
+    { title: 'Exploring Lagos', copy: 'Looking for the next corner, plate, story or view.', image: beachImage, partner: undefined, featured: false },
+    { title: 'People', copy: 'Time with good people is never time wasted.', image: peopleImage, partner: undefined, featured: false },
+    { title: 'Learning', copy: 'Keeping the beginner’s mind switched on.', image: heroImage, partner: undefined, featured: false },
   ],
   facts: ['I like good stories.', 'I enjoy conversations that go somewhere.', 'I believe creative work should still solve real problems.', 'I like people.', 'I enjoy building things from scratch.', 'I ask a lot of questions.', 'I take ideas seriously, but I do not take myself too seriously.'],
   achievements: [
