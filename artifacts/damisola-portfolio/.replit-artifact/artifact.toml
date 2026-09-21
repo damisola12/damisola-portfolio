@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Oluwadamisola Adeyinka Portfolio"
+description = "A premium personal portfolio for Oluwadamisola Adeyinka, a writer, filmmaker, theatre practitioner, producer, customer success professional, entrepreneur, and storyteller based in Lagos, Nigeria."
+version = "1.0.0"
+id = "artifacts/damisola-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21556
+
+[services.development]
+run = "pnpm --filter @workspace/damisola-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/damisola-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/damisola-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21556"
+BASE_PATH = "/"

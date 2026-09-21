@@ -1,0 +1,695 @@
+Create a premium personal portfolio website for me using React + Vite + Tailwind CSS. The site should feel like a polished digital representation of a creative professional — writer, filmmaker, theatre practitioner, producer, customer success professional, entrepreneur, and storyteller.
+
+Core objective
+
+The website should make someone feel like they know me as a person within the first few seconds, while also making my professional experience, creative work, projects, skills, and interests easy to explore.
+
+My personality should come through as friendly, sociable, creative, thoughtful, intelligent, practical, ambitious, and approachable. Avoid making the site feel corporate, cold, overly artistic, childish, or like a generic developer portfolio.
+
+The visual direction should be:
+
+Premium
+Minimalist
+Warm
+Sophisticated
+Human
+Editorial
+Modern
+Clean
+Highly functional
+Easy to navigate
+Lightweight and fast
+Colour palette
+
+Use a refined palette built around:
+
+Deep Emerald Green — primary colour
+Warm Cream / Ivory — primary background
+Muted Gold / Champagne Gold — subtle accent
+Deep Charcoal — primary text
+White where useful
+
+Do not overuse gold. It should feel like a subtle premium accent rather than a luxury-brand cliché.
+
+Avoid:
+
+Neon colours
+Excessive gradients
+Glassmorphism everywhere
+Glowing UI
+Excessive animations
+Flashing elements
+Floating directional arrows
+Overly rounded cards
+Heavy shadows
+Visual clutter
+Generic tech-dashboard aesthetics
+
+The website should feel expensive because of its typography, spacing, composition, hierarchy and restraint, not because of visual effects.
+
+HOME / HERO
+
+The first screen must immediately communicate who I am.
+
+I will provide a large portrait photograph of myself that should serve as the background image of the homepage hero section.
+
+Create a dedicated image placeholder in the code such as:
+
+/public/images/profile-hero.jpg
+
+The layout should intelligently overlay the image with readable text without destroying the photograph.
+
+Hero copy:
+
+OLUWADAMISOLA ADEYINKA
+
+Writer. Filmmaker. Producer. Creative.
+
+Supporting line:
+
+I turn ideas, stories and people into experiences worth remembering.
+
+Include a short, human introduction that communicates that I work across storytelling, film, theatre, creative production, business and people-focused work.
+
+The hero should include understated CTAs such as:
+
+Explore My Work
+Get In Touch
+
+Navigation should remain simple and elegant.
+
+Potential navigation:
+
+About
+Work
+Creative
+Experience
+Projects
+Leisure
+Contact
+
+On mobile, convert this into a clean hamburger menu.
+
+The hero should feel like a strong editorial photograph with typography sitting naturally within the composition.
+
+ABOUT ME
+
+Create an elegant About section that feels personal rather than like a CV.
+
+Include:
+
+Who I Am
+
+I am a writer, actor, director and producer with a strong interest in stories that reflect people, culture, relationships, ambition and everyday life.
+
+I have written for stage and screen, worked in theatre and film production, and developed projects that bring together storytelling, entertainment, education and business.
+
+I also have professional experience in customer success, business development, research, administration and working with people and organisations to turn ideas into practical outcomes.
+
+Make the section feel conversational.
+
+Include a space for a secondary portrait/photo.
+
+Create a small visual "personality snapshot" area with things such as:
+
+I am
+
+A storyteller
+A people person
+A problem solver
+A creative thinker
+A producer
+A lifelong learner
+
+Do not make this look like a skills-rating system.
+
+MY STORY / JOURNEY
+
+Create a visually interesting but minimalist timeline showing the progression of my work.
+
+Include editable timeline entries for:
+
+Education
+
+BSc Applied Chemistry
+
+Teaching
+
+Chemistry / STEM education and Yoruba language teaching
+
+Customer Success
+
+Professional experience helping businesses and individuals adopt digital tools and improve their operations.
+
+Theatre
+
+Writing, acting, directing and producing stage productions.
+
+Film
+
+Screenwriting, directing, producing and developing film projects.
+
+Entrepreneurship
+
+Building creative businesses and platforms including Delta Arts Entertainment and Nollyfi.
+
+Make every timeline entry editable in the source code.
+
+Do not make this section feel like LinkedIn.
+
+CREATIVE WORK
+
+Create one of the strongest sections of the website.
+
+Title:
+
+Stories I Tell
+
+Subtitle:
+
+Stage. Screen. People. Culture.
+
+Create a clean portfolio grid with large image placeholders.
+
+Each project should have:
+
+Image
+Project title
+Year
+Medium
+My role
+Short description
+Optional link
+
+Include these projects as initial examples:
+
+TAAAM
+
+2022
+Stage Production
+Writer / Producer
+
+A landmark independent student theatre production staged at the University of Lagos Main Auditorium.
+
+Ese Oba – The King's Foot
+
+2025
+Stage Production
+Writer
+
+A stage production presented at Terra Kulture.
+
+Pop Socks
+
+Stage / Theatre
+Writer
+
+A coming-of-age story about family expectations, identity, ambition and the courage to choose your own path.
+
+Kola Through To 60
+
+Film / Biographical Project
+Writer / Creative Producer
+
+A biographical project exploring the life and achievements of Dr. Kola Adesina MFR.
+
+Greenlight
+
+Film Project
+
+Include an editable description and image placeholder.
+
+Also leave room for future projects.
+
+The portfolio should support clicking a project to open a beautiful project-detail modal or dedicated page.
+
+DELTA ARTS ENTERTAINMENT
+
+Create a dedicated section for my creative company.
+
+Title:
+
+Delta Arts Entertainment
+
+Tagline:
+
+Original. Creative. Excellent.
+
+Explain that Delta Arts is a creative production company focused on theatre, film, storytelling, events and original experiences.
+
+Include a strong visual area for the Delta Arts logo.
+
+Add editable project cards.
+
+Include a subtle CTA:
+
+Visit Delta Arts →
+
+Leave the URL as an obvious editable placeholder in the code.
+
+NOLLYFI
+
+Create a separate section for:
+
+Nollyfi
+
+Tagline:
+
+Nollyfi-ing all limits to creativity.
+
+Explain that Nollyfi is a creative platform designed to help creative ideas move from validation to production and promotion.
+
+Use:
+
+Validate → Produce → Promote
+
+Create a clean three-step visual explanation.
+
+Include space for:
+
+Nollyfi logo
+Product screenshot
+Website link
+Founder/team information
+
+Make this section visually distinct but still part of the overall design system.
+
+PROFESSIONAL EXPERIENCE
+
+Create a clean, editorial experience section.
+
+Do not make it look like a traditional corporate CV.
+
+Include roles/categories such as:
+
+Customer Success & Business Operations
+
+Experience helping businesses adopt digital tools, organise operations and solve practical problems.
+
+Executive / Administrative Support
+
+Calendar coordination, research, meeting documentation, stakeholder communication, project follow-up and executive support.
+
+Creative Production
+
+Writing, directing, production coordination, stakeholder management, sponsorship and partnerships.
+
+Education
+
+STEM teaching, chemistry education and language teaching.
+
+Each category should have space for:
+
+Organisation
+Role
+Dates
+Description
+Key achievements
+Link
+
+Use expandable sections on mobile.
+
+SKILLS
+
+Create a clean skill section based on categories rather than progress bars.
+
+Categories:
+
+Creative
+
+Screenwriting
+Playwriting
+Story Development
+Acting
+Directing
+Film Production
+Theatre Production
+Creative Strategy
+
+Professional
+
+Customer Success
+Business Development
+Project Coordination
+Research
+Executive Assistance
+Stakeholder Management
+Communication
+
+Digital
+
+Google Workspace
+Notion
+Calendly
+Zoho Analytics
+AI tools
+Digital content production
+
+Do not use percentages or fake proficiency scores.
+
+LEISURE / BEYOND WORK
+
+Create a warm, personal section titled:
+
+When I'm Not Working
+
+This should make visitors feel like they are meeting a person rather than reading a résumé.
+
+Leave image placeholders for leisure activities.
+
+Create editable cards/placeholders for things such as:
+
+Music
+Movies
+Theatre
+Reading
+Conversations
+Travel
+Photography
+Exploring Lagos
+Faith
+Learning new things
+Spending time with people
+
+Allow me to easily replace these with my actual hobbies and images.
+
+Make this section visually relaxed and human.
+
+PERSONALITY SECTION
+
+Create a small memorable section titled:
+
+A Few Things About Me
+
+Use short statements such as:
+
+I like good stories.
+I enjoy conversations that go somewhere.
+I believe creative work should still solve real problems.
+I like people.
+I enjoy building things from scratch.
+I ask a lot of questions.
+I take ideas seriously, but I don't take myself too seriously.
+
+Make all statements editable.
+
+This section should feel like something a visitor remembers after leaving the site.
+
+SELECTED ACHIEVEMENTS
+
+Create a restrained statistics/highlight section.
+
+Use numbers only where they communicate something meaningful.
+
+Examples:
+
+10+
+Years writing stories
+
+15+
+Scripts developed
+
+5+
+Stage productions / plays
+
+1,500+
+Audience reached at TAAAM
+
+90%+
+Audience satisfaction from selected productions
+
+Make these figures editable in one configuration file.
+
+Do not exaggerate or invent additional achievements.
+
+TESTIMONIALS
+
+Create a clean testimonial section.
+
+Use placeholder testimonials:
+
+“Add testimonial here.”
+
+Include:
+
+Name
+Role
+Organisation
+Optional photograph
+
+Allow multiple testimonials.
+
+Do not fabricate real testimonials.
+
+CONTACT
+
+End with a strong but simple contact section.
+
+Headline:
+
+Let's Make Something.
+
+Supporting copy:
+
+Have a story, project, opportunity or idea worth discussing? I'd like to hear it.
+
+Include:
+
+Email
+Phone
+LinkedIn
+Instagram
+X
+YouTube
+Other relevant links
+
+Use placeholders in the code rather than inventing URLs.
+
+Example:
+
+your@email.com
+
+https://linkedin.com/in/yourname
+
+Create a simple contact form with:
+
+Name
+Email
+Subject
+Message
+Send button
+
+The form should be visually clean and functional. Structure it so the form can easily be connected to Formspree, Resend, EmailJS or another service later.
+
+FOOTER
+
+Minimal footer.
+
+Include:
+
+Oluwadamisola Adeyinka
+
+Writer. Filmmaker. Producer. Creative.
+
+Social links.
+
+Copyright.
+
+A small line:
+
+Made with stories, curiosity and a little stubbornness.
+
+DESIGN SYSTEM
+
+Use a premium editorial typography system.
+
+Prefer a sophisticated serif font for major headings and a clean sans-serif for body text.
+
+Possible pairing:
+
+Playfair Display / Cormorant Garamond for major headings
+Inter / Manrope for body text
+
+Use generous whitespace.
+
+Use a strong grid.
+
+Use asymmetrical layouts occasionally, but keep the interface easy to understand.
+
+Sections should have visual rhythm without becoming busy.
+
+Cards should be simple.
+
+Images should do most of the visual work.
+
+Use subtle hover states.
+
+Use restrained transitions around 150–300ms.
+
+No excessive parallax.
+
+No automatic carousels.
+
+No distracting animations.
+
+No loading animation unless genuinely needed.
+
+MOBILE-FIRST REQUIREMENTS
+
+This is extremely important.
+
+Build the website mobile-first, not as a desktop website that gets squeezed onto mobile.
+
+Test layouts around:
+
+320px
+375px
+390px
+430px
+768px
+1024px
+1440px+
+
+On mobile:
+
+Navigation becomes a clean menu.
+Typography scales naturally.
+Portfolio grids become single-column or two-column where appropriate.
+Images retain sensible aspect ratios.
+Buttons remain easy to tap.
+No horizontal scrolling.
+No text gets cut off.
+No oversized hero elements.
+Timeline becomes vertical.
+Complex desktop layouts simplify intelligently.
+Contact form becomes single-column.
+Touch targets should be comfortably sized.
+PERFORMANCE
+
+Keep the website lightweight.
+
+Use:
+
+Optimised images
+Lazy loading
+Responsive image sizes
+Minimal dependencies
+CSS rather than unnecessary JavaScript effects
+Semantic HTML
+Proper image alt text
+Efficient component structure
+
+Do not add libraries simply for visual effects.
+
+The website should load quickly even on a Nigerian mobile connection.
+
+ACCESSIBILITY
+
+Include:
+
+Proper heading hierarchy
+Keyboard navigation
+Visible focus states
+Accessible navigation
+Good colour contrast
+Descriptive alt text
+Accessible buttons
+Form labels
+Reduced-motion support
+
+Respect prefers-reduced-motion.
+
+SEO
+
+Add:
+
+Proper page title
+Meta description
+Open Graph metadata
+Twitter/X card metadata
+Semantic HTML
+Structured headings
+Descriptive image alt text
+Favicon placeholder
+robots.txt
+sitemap.xml
+
+Suggested title:
+
+Oluwadamisola Adeyinka | Writer, Filmmaker & Producer
+
+Suggested description:
+
+The personal portfolio of Oluwadamisola Adeyinka — writer, filmmaker, producer, creative professional and storyteller based in Lagos, Nigeria.
+
+CODE ORGANISATION
+
+Keep the project clean and easy for me to maintain.
+
+Use reusable components such as:
+
+Navbar
+Hero
+About
+StoryTimeline
+CreativeWork
+ProjectCard
+DeltaArts
+Nollyfi
+Experience
+Skills
+Leisure
+Personality
+Achievements
+Testimonials
+Contact
+Footer
+
+Create a central data/config file where I can easily edit:
+
+Bio
+Projects
+Experience
+Skills
+Social links
+Contact information
+Achievements
+Leisure activities
+Testimonials
+Images
+
+Use clear comments showing exactly where I should replace:
+
+Images
+Text
+Social links
+Project links
+Contact details
+Testimonials
+
+Create an /images or /public/images structure with clearly named placeholders.
+
+FINAL UX DIRECTION
+
+The website should feel like walking into my personal studio rather than opening a résumé.
+
+Someone should be able to:
+
+See my face and immediately understand who I am.
+Get a sense of my personality.
+Understand what I do.
+See the stories and projects I have created.
+Understand my professional experience.
+Explore my companies and creative ventures.
+See the person behind the work.
+Contact me easily.
+
+The final result should be minimal, premium, warm, memorable and highly usable.
+
+Do not make it look like a template.
+
+Do not fill every available space.
+
+Let photography, typography, whitespace and strong writing carry the design.
+
+Build the complete working website, not a static mockup.
