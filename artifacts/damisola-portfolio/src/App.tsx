@@ -256,9 +256,9 @@ function Ventures() {
   return (
     <section id="creative" className="bg-[#f5f0e6] py-24 sm:py-32">
       <div className="section-wrap">
-        <SectionIntro number="04" label="The companies" title="Making room for ideas" />
-        <div className="grid gap-0 border-y border-[#183c34]/20 lg:grid-cols-2">
-          <article className="border-b border-[#183c34]/20 py-10 lg:border-b-0 lg:border-r lg:pr-14 lg:py-14">
+        <SectionIntro number="04" label="The company" title="Making room for ideas" />
+        <div className="max-w-4xl border-y border-[#183c34]/20">
+          <article className="py-10 lg:py-14">
             <div className="flex items-start justify-between gap-5">
               <div>
                 <p className="eyebrow text-[#b89457]">Creative production company</p>
@@ -272,19 +272,6 @@ function Ventures() {
               {siteContent.ventures.delta.cards.map((card) => <div key={card} className="border-l-2 border-[#c9a76a] pl-3 text-sm text-[#183c34]">{card}</div>)}
             </div>
              <a href={siteContent.ventures.delta.link} className="mt-10 inline-flex items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-delta-arts">Ask about Delta Arts <ExternalLink size={13} /></a>
-          </article>
-          <article className="relative overflow-hidden bg-[#e7dfcf] px-6 py-10 lg:px-14 lg:py-14">
-            <div className="absolute -right-10 -top-16 font-display text-[15rem] leading-none text-[#d0c3aa]/40">N</div>
-            <div className="relative">
-              <p className="eyebrow text-[#b89457]">A platform for creative momentum</p>
-              <h3 className="mt-4 font-display text-5xl leading-none text-[#183c34]">{siteContent.ventures.nollyfi.title}</h3>
-              <p className="mt-5 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#385c53]">{siteContent.ventures.nollyfi.tagline}</p>
-              <p className="mt-7 max-w-md text-sm leading-7 text-[#385c53]/80">{siteContent.ventures.nollyfi.copy}</p>
-              <div className="mt-10 grid grid-cols-3 gap-2">
-                {['Validate', 'Produce', 'Promote'].map((step, index) => <div key={step} className="border-t border-[#183c34]/40 pt-3"><span className="font-mono-custom text-[10px] text-[#b89457]">0{index + 1}</span><p className="mt-2 font-display text-lg text-[#183c34]">{step}</p></div>)}
-              </div>
-              <div className="mt-12 border-t border-[#183c34]/15 pt-4 font-mono-custom text-[10px] uppercase leading-5 tracking-[0.1em] text-[#385c53]/70">Website, product screenshot and founder information to be added.</div>
-            </div>
           </article>
         </div>
       </div>

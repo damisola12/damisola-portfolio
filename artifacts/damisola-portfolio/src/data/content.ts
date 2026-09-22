@@ -25,7 +25,7 @@ export const siteContent = {
     { label: 'Theatre', title: 'Writing, acting, directing and producing', copy: 'The room, the rehearsal, the live exchange — theatre taught me to listen closely.' },
       { label: 'Film', title: 'Screenwriting, directing and production', copy: 'Building stories for the screen with care for both the idea and the people carrying it.' },
       { label: 'Podcast', title: 'Dam and People Talk Relationship', copy: 'Making room for honest conversations about people, connection and the relationships that shape our lives.' },
-    { label: 'Entrepreneurship', title: 'Delta Arts Entertainment and Nollyfi', copy: 'Creating platforms and companies that help good ideas move.' },
+    { label: 'Entrepreneurship', title: 'Delta Arts Entertainment', copy: 'Creating a creative company that helps good ideas move.' },
   ],
   projects: [
     { id: 'taaam', title: 'TAAAM', year: '2022', medium: 'Stage Production', role: 'Writer / Producer', description: 'A landmark independent student theatre production staged at the University of Lagos Main Auditorium.', image: teamImage, details: 'TAAAM brought a large, energetic ensemble together around a story made for a live audience. It was a lesson in building something ambitious with limited resources and a lot of belief.' },
@@ -36,7 +36,6 @@ export const siteContent = {
   ],
   ventures: {
     delta: { title: 'Delta Arts Entertainment', tagline: 'Original. Creative. Excellent.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', link: 'mailto:adeyinkadamisola@gmail.com', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
-    nollyfi: { title: 'Nollyfi', tagline: 'Nollyfi-ing all limits to creativity.', copy: 'A creative platform designed to help creative ideas move from validation to production and promotion.', link: 'mailto:adeyinkadamisola@gmail.com' },
   },
   podcast: {
     title: 'Dam and People Talk Relationship',
