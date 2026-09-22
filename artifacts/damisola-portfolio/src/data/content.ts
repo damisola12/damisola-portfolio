@@ -104,7 +104,7 @@ export const siteContent = {
     { value: '1,500+', label: 'Audience reached at TAAAM' },
     { value: '90%+', label: 'Audience satisfaction from selected productions' },
   ],
-  testimonials: [{ quote: 'Add testimonial here.', name: 'Name to be added', role: 'Role to be added', organisation: 'Organisation to be added' }],
+  testimonials: [{ quote: 'You’re such a kind man, you care deeply about your students and about just anyone, and not in a way that seems glaring, in subtle ways that often go unnoticed.', name: 'Blossom Omoruyi', role: '', organisation: '' }],
   contact: {
     email: 'adeyinkadamisola@gmail.com',
     phone: '+2348101344189',

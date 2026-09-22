@@ -441,10 +441,10 @@ function AppContent() {
               {siteContent.achievements.map((item) => <div key={item.label} className="border-b border-[#183c34]/20 py-7 sm:border-b-0 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-r-0"><p className="font-display text-4xl text-[#183c34]">{item.value}</p><p className="mt-2 max-w-[120px] text-xs leading-5 text-[#385c53]/75">{item.label}</p></div>)}
             </div>
             <div className="mt-24 grid gap-10 border-t border-[#183c34]/20 pt-7 lg:grid-cols-[180px_1fr]">
-              <span className="eyebrow text-[#385c53]/70">Kind words, soon</span>
+              <span className="eyebrow text-[#385c53]/70">Kind words</span>
               <div className="max-w-2xl">
                 <p className="font-display text-3xl leading-tight text-[#183c34]">“{siteContent.testimonials[0].quote}”</p>
-                <p className="mt-5 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#385c53]/70">{siteContent.testimonials[0].name} · {siteContent.testimonials[0].role} · {siteContent.testimonials[0].organisation}</p>
+                <p className="mt-5 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#385c53]/70">{[siteContent.testimonials[0].name, siteContent.testimonials[0].role, siteContent.testimonials[0].organisation].filter(Boolean).join(' · ')}</p>
               </div>
             </div>
           </div>
