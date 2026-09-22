@@ -139,7 +139,7 @@ function About() {
         <div className="grid items-start gap-12 lg:grid-cols-[.8fr_1.15fr] lg:gap-24">
           <div className="reveal relative max-w-sm">
             <div className="absolute -left-4 -top-4 h-24 w-24 border-l border-t border-[#c9a76a]" />
-            <img src={siteContent.images.peopleImage} alt="Oluwadamisola with a group of young people outdoors" loading="lazy" className="relative aspect-[4/5] w-full object-cover" data-testid="img-about" />
+            <img src={siteContent.images.aboutImage} alt="Oluwadamisola seated in a thoughtful portrait" loading="lazy" className="relative aspect-[4/5] w-full object-cover" data-testid="img-about" />
             <p className="mt-4 max-w-[230px] font-mono-custom text-[10px] uppercase leading-5 tracking-[0.12em] text-[#385c53]/75">People, place and the stories we carry.</p>
           </div>
           <div className="reveal reveal-delay-1">

@@ -1,8 +1,11 @@
 import heroImage from '@assets/Damisola_Image_(1)_1790002590467.jpeg';
-import teachingImage from '@assets/eip_6_1790002640602.jpg';
-import teamImage from '@assets/eip_7_1790002640603.jpg';
-import beachImage from '@assets/2026_02_14_18_44_IMG_0633_1790002770696.JPG';
-import peopleImage from '@assets/2026_04_02_11_51_IMG_1273_1790002770697.JPG';
+import aboutImage from '@assets/1_1790072863402.jpeg';
+import exploringImage from '@assets/2025_07_20_13_15_IMG_5664_1790072863403.JPG';
+import festivalGroupImage from '@assets/2025_12_21_12_46_IMG_1366_1790072863404.JPG';
+import communityImage from '@assets/IMG_3960_1790072863405.JPG';
+import cultureImage from '@assets/IMG_8841_1790072863405.JPG';
+import danceImage from '@assets/IMG_9180.jpg_1790072863406.jpeg';
+import gatheringImage from '@assets/IMG_9212.jpg_1790072863407.jpeg';
 import eseObaPoster from '@assets/Ese_Oba_Poster_1790070578683.jpg';
 import greenlightPoster from '@assets/Greenlight_Poster_1790070578686.jpg';
 import ktt60Poster from '@assets/KTT60_Poster_1790070578687.jpg';
@@ -22,7 +25,7 @@ export const siteContent = {
   title: 'Writer. Filmmaker. Producer. Creative.',
   location: 'Lagos, Nigeria',
   heroImage,
-  images: { heroImage, teachingImage, teamImage, beachImage, peopleImage },
+  images: { heroImage, aboutImage },
   intro: 'I turn ideas, stories and people into experiences worth remembering.',
   about: [
     'I am a writer, actor, director and producer with a strong interest in stories that reflect people, culture, relationships, ambition and everyday life.',
@@ -77,12 +80,12 @@ export const siteContent = {
     Digital: ['Google Workspace', 'Notion', 'Calendly', 'Zoho Workspace', 'AI tools', 'Digital content production'],
   },
   leisure: [
-    { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: teachingImage, partner: 'With Precious Usuwa', featured: true },
-    { title: 'Movies & theatre', copy: 'Still watching closely. Still taking notes.', image: teachingImage, partner: undefined, featured: false },
-    { title: 'Conversations', copy: 'Especially the ones that go somewhere unexpected.', image: teamImage, partner: undefined, featured: false },
-    { title: 'Exploring Lagos', copy: 'Looking for the next corner, plate, story or view.', image: beachImage, partner: undefined, featured: false },
-    { title: 'People', copy: 'Time with good people is never time wasted.', image: peopleImage, partner: undefined, featured: false },
-    { title: 'Learning', copy: 'Keeping the beginner’s mind switched on.', image: heroImage, partner: undefined, featured: false },
+    { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: communityImage, partner: 'With Precious Usuwa', featured: true },
+    { title: 'Movies & theatre', copy: 'Still watching closely. Still taking notes.', image: festivalGroupImage, partner: undefined, featured: false },
+    { title: 'Conversations', copy: 'Especially the ones that go somewhere unexpected.', image: danceImage, partner: undefined, featured: false },
+    { title: 'Exploring Lagos', copy: 'Looking for the next corner, plate, story or view.', image: exploringImage, partner: undefined, featured: false },
+    { title: 'People', copy: 'Time with good people is never time wasted.', image: gatheringImage, partner: undefined, featured: false },
+    { title: 'Learning', copy: 'Keeping the beginner’s mind switched on.', image: cultureImage, partner: undefined, featured: false },
   ],
   facts: ['I like good stories.', 'I enjoy conversations that go somewhere.', 'I believe creative work should still solve real problems.', 'I like people.', 'I enjoy building things from scratch.', 'I ask a lot of questions.', 'I take ideas seriously, but I do not take myself too seriously.'],
   achievements: [
