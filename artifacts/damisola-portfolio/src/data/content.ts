@@ -74,7 +74,7 @@ export const siteContent = {
   skills: {
     Creative: ['Screenwriting', 'Playwriting', 'Story Development', 'Acting', 'Directing', 'Film Production', 'Theatre Production', 'Creative Strategy'],
     Professional: ['Customer Success', 'Business Development', 'Project Coordination', 'Research', 'Executive Assistance', 'Stakeholder Management', 'Communication'],
-    Digital: ['Google Workspace', 'Notion', 'Calendly', 'Zoho Analytics', 'AI tools', 'Digital content production'],
+    Digital: ['Google Workspace', 'Notion', 'Calendly', 'Zoho Workspace', 'AI tools', 'Digital content production'],
   },
   leisure: [
     { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: teachingImage, partner: 'With Precious Usuwa', featured: true },

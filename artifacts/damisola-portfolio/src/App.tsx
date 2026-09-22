@@ -327,7 +327,6 @@ function Podcast() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 font-mono-custom text-[10px] uppercase leading-5 tracking-[0.1em] text-[#d6d0c4]/45">New episodes and listening links can be updated in the editable content file.</p>
           </div>
         </div>
       </div>
