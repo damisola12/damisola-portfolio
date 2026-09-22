@@ -258,20 +258,22 @@ function Ventures() {
       <div className="section-wrap">
         <SectionIntro number="04" label="The company" title="Making room for ideas" />
         <div className="max-w-4xl border-y border-[#183c34]/20">
-          <article className="py-10 lg:py-14">
-            <div className="flex items-start justify-between gap-5">
-              <div>
-                <p className="eyebrow text-[#b89457]">Creative production company</p>
-                <h3 className="mt-4 font-display text-4xl leading-none text-[#183c34]">{siteContent.ventures.delta.title}</h3>
+          <article className="grid gap-10 py-10 lg:grid-cols-[.86fr_1.14fr] lg:items-center lg:gap-14 lg:py-14">
+            <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_38%,#31574d,#183c34_68%,#102e29)] p-5 sm:min-h-[380px]" data-testid="delta-arts-logo-panel">
+              <div className="absolute -bottom-20 -left-16 h-48 w-48 rounded-full border border-[#c9a76a]/30" />
+              <div className="absolute -right-12 -top-14 h-40 w-40 rounded-full border border-[#d6d0c4]/15" />
+              <img src={siteContent.ventures.delta.logo} alt="Delta Arts Entertainment — Film, Theatre, Media" className="relative h-full w-full max-w-[25rem] object-contain opacity-95 mix-blend-screen" data-testid="img-delta-arts-logo" />
+            </div>
+            <div>
+              <p className="eyebrow text-[#b89457]">Creative production company</p>
+              <h3 className="mt-4 font-display text-4xl leading-none text-[#183c34]">{siteContent.ventures.delta.title}</h3>
+              <p className="mt-5 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#385c53]">{siteContent.ventures.delta.tagline}</p>
+              <p className="mt-7 max-w-md text-sm leading-7 text-[#385c53]/80">{siteContent.ventures.delta.copy}</p>
+              <div className="mt-9 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+                {siteContent.ventures.delta.cards.map((card) => <div key={card} className="border-l-2 border-[#c9a76a] pl-3 text-sm text-[#183c34]">{card}</div>)}
               </div>
-              <span className="font-display text-3xl italic text-[#b89457]">DA</span>
+              <a href={siteContent.ventures.delta.link} className="mt-10 inline-flex items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-delta-arts">Ask about Delta Arts <ExternalLink size={13} /></a>
             </div>
-            <p className="mt-5 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#385c53]">{siteContent.ventures.delta.tagline}</p>
-            <p className="mt-7 max-w-md text-sm leading-7 text-[#385c53]/80">{siteContent.ventures.delta.copy}</p>
-            <div className="mt-9 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-              {siteContent.ventures.delta.cards.map((card) => <div key={card} className="border-l-2 border-[#c9a76a] pl-3 text-sm text-[#183c34]">{card}</div>)}
-            </div>
-             <a href={siteContent.ventures.delta.link} className="mt-10 inline-flex items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-delta-arts">Ask about Delta Arts <ExternalLink size={13} /></a>
           </article>
         </div>
       </div>

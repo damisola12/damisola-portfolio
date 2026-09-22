@@ -10,6 +10,7 @@ import taaamPoster from '@assets/TAAAM_Poster_1790070578687.jpg';
 import defendantPoster from '@assets/The_Defendant_Poster_1790070578688.png';
 import popSocksPoster from '@assets/Pop_Socks_1_1790070606124.png';
 import iftdPoster from '@assets/IFTD_IMAGE_1790070780257.jpg';
+import deltaArtsLogo from '@assets/DELTA_ARTS_LOGO_NO-BG_1790070841394.png';
 
 // EDITABLE CONTENT: replace copy, links, images and contact details here.
 export const siteContent = {
@@ -44,7 +45,7 @@ export const siteContent = {
     { id: 'i-find-the-defendant', title: 'I Find the Defendant', year: '2026', medium: 'Short Film', role: 'Writer', description: 'A short film built around memory, perspective and the Rashomon effect.', image: iftdPoster, details: 'A short film written by Oluwadamisola Adeyinka.' },
   ],
   ventures: {
-    delta: { title: 'Delta Arts Entertainment', tagline: 'Original. Creative. Excellent.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', link: 'mailto:adeyinkadamisola@gmail.com', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
+    delta: { title: 'Delta Arts Entertainment', tagline: 'Film | Theatre | Media.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', logo: deltaArtsLogo, link: 'mailto:adeyinkadamisola@gmail.com', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
   },
   podcast: {
     title: 'Dam and People Talk Relationship',
