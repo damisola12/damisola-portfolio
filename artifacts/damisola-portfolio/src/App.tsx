@@ -376,14 +376,16 @@ function Leisure() {
         </SectionIntro>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {siteContent.leisure.map((item, index) => (
-            <article key={item.title} className={`reveal leisure-image group ${item.featured ? 'sm:col-span-2 lg:col-span-2 lg:grid lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-8' : index === 1 ? 'lg:mt-14' : ''}`}>
-              <div className={`${item.featured ? 'aspect-[1.35/1]' : 'aspect-[1.18/1]'} overflow-hidden bg-[#e7dfcf]`}><img src={item.image} alt={`${item.title} — personal life and interests`} loading="lazy" className="h-full w-full object-cover" /></div>
-              <div className={item.featured ? 'pb-1' : ''}>
-                {item.featured && <p className="mt-5 eyebrow text-[#b89457] lg:mt-0">Community work</p>}
-                <h3 className="mt-4 font-display text-2xl text-[#183c34]">{item.title}</h3>
-                {item.partner && <p className="mt-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#b89457]">{item.partner}</p>}
-                <p className="mt-2 max-w-md text-sm leading-6 text-[#385c53]/80">{item.copy}</p>
-              </div>
+            <article key={item.image} className={`reveal leisure-image group ${item.featured ? 'sm:col-span-2 lg:col-span-2 lg:grid lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-8' : index === 1 ? 'lg:mt-14' : ''}`}>
+              <div className={`${item.featured ? 'aspect-[1.35/1]' : 'aspect-[1.18/1]'} overflow-hidden bg-[#e7dfcf]`}><img src={item.image} alt={item.featured ? `${item.title} — personal life and interests` : 'Personal gallery photograph'} loading="lazy" className="h-full w-full object-cover" /></div>
+              {item.featured && (
+                <div className="pb-1">
+                  <p className="mt-5 eyebrow text-[#b89457] lg:mt-0">Community work</p>
+                  <h3 className="mt-4 font-display text-2xl text-[#183c34]">{item.title}</h3>
+                  {item.partner && <p className="mt-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#b89457]">{item.partner}</p>}
+                  <p className="mt-2 max-w-md text-sm leading-6 text-[#385c53]/80">{item.copy}</p>
+                </div>
+              )}
             </article>
           ))}
         </div>

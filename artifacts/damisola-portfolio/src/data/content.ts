@@ -1,8 +1,8 @@
 import heroImage from '@assets/Damisola_Image_(1)_1790002590467.jpeg';
+import teachingImage from '@assets/eip_6_1790002640602.jpg';
 import aboutImage from '@assets/1_1790072863402.jpeg';
 import exploringImage from '@assets/2025_07_20_13_15_IMG_5664_1790072863403.JPG';
 import festivalGroupImage from '@assets/2025_12_21_12_46_IMG_1366_1790072863404.JPG';
-import communityImage from '@assets/IMG_3960_1790072863405.JPG';
 import cultureImage from '@assets/IMG_8841_1790072863405.JPG';
 import danceImage from '@assets/IMG_9180.jpg_1790072863406.jpeg';
 import gatheringImage from '@assets/IMG_9212.jpg_1790072863407.jpeg';
@@ -18,6 +18,14 @@ import podcastCover from '@assets/ChatGPT_Image_Jun_9,_2026,_01_34_42_PM_(1)_179
 import episode15Cover from '@assets/DPTR_15_COVER_1790071346446.png';
 import episode14Cover from '@assets/DPTR_14_COVER_1790071346447.png';
 import episode13Cover from '@assets/DPTR_13_COVER_1790071346447.png';
+
+type LeisureItem = {
+  image: string;
+  title?: string;
+  copy?: string;
+  partner?: string;
+  featured?: boolean;
+};
 
 // EDITABLE CONTENT: replace copy, links, images and contact details here.
 export const siteContent = {
@@ -80,13 +88,13 @@ export const siteContent = {
     Digital: ['Google Workspace', 'Notion', 'Calendly', 'Zoho Workspace', 'AI tools', 'Digital content production'],
   },
   leisure: [
-    { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: communityImage, partner: 'With Precious Usuwa', featured: true },
-    { title: 'Movies & theatre', copy: 'Still watching closely. Still taking notes.', image: festivalGroupImage, partner: undefined, featured: false },
-    { title: 'Conversations', copy: 'Especially the ones that go somewhere unexpected.', image: danceImage, partner: undefined, featured: false },
-    { title: 'Exploring Lagos', copy: 'Looking for the next corner, plate, story or view.', image: exploringImage, partner: undefined, featured: false },
-    { title: 'People', copy: 'Time with good people is never time wasted.', image: gatheringImage, partner: undefined, featured: false },
-    { title: 'Learning', copy: 'Keeping the beginner’s mind switched on.', image: cultureImage, partner: undefined, featured: false },
-  ],
+    { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: teachingImage, partner: 'With Precious Usuwa', featured: true },
+    { image: festivalGroupImage },
+    { image: danceImage },
+    { image: exploringImage },
+    { image: gatheringImage },
+    { image: cultureImage },
+  ] as LeisureItem[],
   facts: ['I like good stories.', 'I enjoy conversations that go somewhere.', 'I believe creative work should still solve real problems.', 'I like people.', 'I enjoy building things from scratch.', 'I ask a lot of questions.', 'I take ideas seriously, but I do not take myself too seriously.'],
   achievements: [
     { value: '10+', label: 'Years writing stories' },
