@@ -3,6 +3,13 @@ import teachingImage from '@assets/eip_6_1790002640602.jpg';
 import teamImage from '@assets/eip_7_1790002640603.jpg';
 import beachImage from '@assets/2026_02_14_18_44_IMG_0633_1790002770696.JPG';
 import peopleImage from '@assets/2026_04_02_11_51_IMG_1273_1790002770697.JPG';
+import eseObaPoster from '@assets/Ese_Oba_Poster_1790070578683.jpg';
+import greenlightPoster from '@assets/Greenlight_Poster_1790070578686.jpg';
+import ktt60Poster from '@assets/KTT60_Poster_1790070578687.jpg';
+import taaamPoster from '@assets/TAAAM_Poster_1790070578687.jpg';
+import defendantPoster from '@assets/The_Defendant_Poster_1790070578688.png';
+import popSocksPoster from '@assets/Pop_Socks_1_1790070606124.png';
+import iftdPoster from '@assets/IFTD_IMAGE_1790070780257.jpg';
 
 // EDITABLE CONTENT: replace copy, links, images and contact details here.
 export const siteContent = {
@@ -28,11 +35,13 @@ export const siteContent = {
     { label: 'Entrepreneurship', title: 'Delta Arts Entertainment', copy: 'Creating a creative company that helps good ideas move.' },
   ],
   projects: [
-    { id: 'taaam', title: 'TAAAM', year: '2022', medium: 'Stage Production', role: 'Writer / Producer', description: 'A landmark independent student theatre production staged at the University of Lagos Main Auditorium.', image: teamImage, details: 'TAAAM brought a large, energetic ensemble together around a story made for a live audience. It was a lesson in building something ambitious with limited resources and a lot of belief.' },
-    { id: 'ese-oba', title: 'Ese Oba – The King’s Foot', year: '2025', medium: 'Stage Production', role: 'Writer', description: 'A stage production presented at Terra Kulture.', image: teachingImage, details: 'A story written for the theatre, shaped by language, place and the charge of a room gathered to listen.' },
-    { id: 'pop-socks', title: 'Pop Socks', year: '—', medium: 'Stage / Theatre', role: 'Writer', description: 'A coming-of-age story about family expectations, identity, ambition and the courage to choose your own path.', image: peopleImage, details: 'Pop Socks lives in the space between what a family hopes for you and what you quietly know about yourself.' },
-    { id: 'kola-60', title: 'Kola Through To 60', year: '—', medium: 'Film / Biographical Project', role: 'Writer / Creative Producer', description: 'A biographical project exploring the life and achievements of Dr. Kola Adesina MFR.', image: beachImage, details: 'A biographical project rooted in a life of work, leadership and achievement. Project link to be added.' },
-    { id: 'greenlight', title: 'Greenlight', year: '—', medium: 'Film Project', role: 'Writer / Producer', description: 'A film project in development.', image: heroImage, details: 'Editable project notes, collaborators and link can be added here when ready.' },
+    { id: 'taaam', title: 'Two and a Half Men/t (TAAAM)', year: '2022', medium: 'Stage Production', role: 'Writer / Producer', description: 'A landmark theatre production staged at the University of Lagos Main Auditorium.', image: taaamPoster, details: 'Two and a Half Men/t brought a large, energetic ensemble together around a story made for a live audience. Written and produced by Oluwadamisola Adeyinka.' },
+    { id: 'ese-oba', title: 'Ese Oba – The King’s Foot', year: '2025', medium: 'Stage Production', role: 'Writer / Producer', description: 'A stage production presented at Terra Kulture Arena.', image: eseObaPoster, details: 'A story shaped by language, place and the charge of a room gathered to listen. Written and produced by Oluwadamisola Adeyinka.' },
+    { id: 'pop-socks', title: 'Pop Socks', year: '—', medium: 'Stage / Theatre', role: 'Writer / Producer', description: 'A coming-of-age story about family expectations, identity, ambition and the courage to choose your own path.', image: popSocksPoster, details: 'Pop Socks lives in the space between what a family hopes for you and what you quietly know about yourself. Written and produced by Oluwadamisola Adeyinka.' },
+    { id: 'kola-60', title: 'Kola Through To 60', year: '—', medium: 'Stage Performance', role: 'Writer / Producer', description: 'A biographical stage performance exploring the life and achievements of Dr. Kola Adesina MFR.', image: ktt60Poster, details: 'A biographical story rooted in a life of work, leadership and achievement. Written and produced by Oluwadamisola Adeyinka.' },
+    { id: 'greenlight', title: 'Greenlight', year: '2022', medium: 'Stage / Film Project', role: 'Writer / Director', description: 'A story about consent, communication and the choices we make before moving forward.', image: greenlightPoster, details: 'Greenlight is a story written and directed by Oluwadamisola Adeyinka.' },
+    { id: 'the-defendant', title: 'The Defendant', year: '—', medium: 'Stage Play', role: 'Writer', description: 'A play presented by The New House.', image: defendantPoster, details: 'A Daniel Omogunloye play written by Oluwadamisola Adeyinka.' },
+    { id: 'i-find-the-defendant', title: 'I Find the Defendant', year: '2026', medium: 'Short Film', role: 'Writer', description: 'A short film built around memory, perspective and the Rashomon effect.', image: iftdPoster, details: 'A short film written by Oluwadamisola Adeyinka.' },
   ],
   ventures: {
     delta: { title: 'Delta Arts Entertainment', tagline: 'Original. Creative. Excellent.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', link: 'mailto:adeyinkadamisola@gmail.com', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },

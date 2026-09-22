@@ -199,7 +199,7 @@ function ProjectModal({ project, onClose }: { project: typeof siteContent.projec
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#102e29]/80 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="project-title" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <div className="relative grid max-h-[90vh] w-full max-w-4xl overflow-auto bg-[#f5f0e6] md:grid-cols-[.8fr_1fr]">
         <button type="button" onClick={onClose} className="absolute right-4 top-4 z-10 border border-[#f5f0e6]/30 bg-[#102e29] p-2 text-[#f5f0e6] transition-colors hover:bg-[#c9a76a] hover:text-[#102e29]" aria-label="Close project details" data-testid="button-close-project"><X size={18} strokeWidth={1.5} /></button>
-        <img src={project.image} alt={`${project.title} project`} className="h-64 w-full object-cover md:h-full" />
+        <img src={project.image} alt={`${project.title} project`} className="h-64 w-full bg-[#31574d] object-contain p-2 md:h-full" />
         <div className="p-7 sm:p-12">
           <p className="eyebrow text-[#b89457]">{project.year} · {project.medium}</p>
           <h2 id="project-title" className="mt-4 font-display text-5xl leading-none tracking-tight text-[#183c34]">{project.title}</h2>
@@ -227,8 +227,8 @@ function CreativeWork() {
         <div id="projects" className="grid gap-x-7 gap-y-14 sm:grid-cols-2 lg:grid-cols-12">
           {siteContent.projects.map((project, index) => (
             <button type="button" key={project.id} onClick={() => setSelected(project)} className={`project-image group text-left ${index === 0 ? 'lg:col-span-7' : index === 1 ? 'lg:col-span-5 lg:mt-20' : index === 2 ? 'lg:col-span-5' : index === 3 ? 'lg:col-span-4 lg:mt-16' : 'lg:col-span-3'}`} data-testid={`button-project-${project.id}`}>
-              <div className={`relative overflow-hidden bg-[#31574d] ${index === 0 ? 'aspect-[1.2/1]' : index === 1 ? 'aspect-[.92/1]' : 'aspect-[1.05/1]'}`}>
-                <img src={project.image} alt={`${project.title}, ${project.medium}`} loading="lazy" className="h-full w-full object-cover opacity-90" />
+              <div className={`relative overflow-hidden bg-[#31574d] ${index === 0 ? 'aspect-[1.2/1]' : index === 1 ? 'aspect-[.92/1]' : 'aspect-[4/5]'}`}>
+                <img src={project.image} alt={`${project.title}, ${project.medium}`} loading="lazy" className="h-full w-full object-contain opacity-90" />
                 <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center bg-[#d9b979] text-[#183c34] opacity-0 transition-opacity group-hover:opacity-100"><ArrowUpRight size={17} strokeWidth={1.5} /></span>
               </div>
               <div className="mt-4 flex items-start justify-between gap-4">
