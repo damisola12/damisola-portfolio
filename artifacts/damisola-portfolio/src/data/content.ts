@@ -24,6 +24,7 @@ type LeisureItem = {
   title?: string;
   copy?: string;
   partner?: string;
+  link?: string;
   featured?: boolean;
 };
 
@@ -88,7 +89,7 @@ export const siteContent = {
     Digital: ['Google Workspace', 'Notion', 'Calendly', 'Zoho Workspace', 'AI tools', 'Digital content production'],
   },
   leisure: [
-    { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: teachingImage, partner: 'With Precious Usuwa', featured: true },
+    { title: 'Give back', copy: 'PathEx Education Foundation is an education foundation focused on Ultimate and Penultimate students in Nigeria, tackling career decision problems and carrying the message: School Is Not A Scam.', image: teachingImage, partner: 'With Precious Usuwa', link: 'https://pathex.vercel.app', featured: true },
     { image: festivalGroupImage },
     { image: danceImage },
     { image: exploringImage },

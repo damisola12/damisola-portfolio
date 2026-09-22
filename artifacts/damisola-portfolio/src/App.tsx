@@ -384,6 +384,7 @@ function Leisure() {
                   <h3 className="mt-4 font-display text-2xl text-[#183c34]">{item.title}</h3>
                   {item.partner && <p className="mt-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#b89457]">{item.partner}</p>}
                   <p className="mt-2 max-w-md text-sm leading-6 text-[#385c53]/80">{item.copy}</p>
+                  {item.link && <a href={item.link} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] transition-colors hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-pathex">Visit PathEx Education Foundation <ExternalLink size={13} /></a>}
                 </div>
               )}
             </article>
