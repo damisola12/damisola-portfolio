@@ -11,6 +11,10 @@ import defendantPoster from '@assets/The_Defendant_Poster_1790070578688.png';
 import popSocksPoster from '@assets/Pop_Socks_1_1790070606124.png';
 import iftdPoster from '@assets/IFTD_IMAGE_1790070780257.jpg';
 import deltaArtsLogo from '@assets/DELTA_ARTS_LOGO_NO-BG_1790070841394.png';
+import podcastCover from '@assets/ChatGPT_Image_Jun_9,_2026,_01_34_42_PM_(1)_1790071209918.png';
+import episode15Cover from '@assets/DPTR_15_COVER_1790071346446.png';
+import episode14Cover from '@assets/DPTR_14_COVER_1790071346447.png';
+import episode13Cover from '@assets/DPTR_13_COVER_1790071346447.png';
 
 // EDITABLE CONTENT: replace copy, links, images and contact details here.
 export const siteContent = {
@@ -53,12 +57,12 @@ export const siteContent = {
     tagline: 'Conversations about people, connection and the stories between us.',
     copy: 'A podcast platform where curiosity becomes conversation. Dam and People Talk Relationship is a major part of my creative journey — a space for exploring how people meet, grow, disagree, love and make meaning together.',
     host: 'Hosted by Oluwadamisola Adeyinka',
-    image: peopleImage,
-    link: 'mailto:adeyinkadamisola@gmail.com', // Replace with the live podcast or listening-platform URL.
+    image: podcastCover,
+    link: 'https://rss.com/podcasts/dptr-dam-and-precious-talk-relationships',
     episodes: [
-      { number: '01', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
-      { number: '02', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
-      { number: '03', title: 'Episode title to be added', copy: 'Guest and conversation details to be added.' },
+      { number: '15', title: 'Talking About PPD', image: episode15Cover, spotify: 'https://open.spotify.com/episode/50BDxXHW1iI7Gb6d9tdz20?si=-3CW1k76SKSuvaqLxIaQAQ', apple: 'https://podcasts.apple.com/us/podcast/dptr-dam-and-people-talk-relationships/id1896800781?i=1000788331199' },
+      { number: '14', title: 'Geographical Thinking', image: episode14Cover, spotify: 'https://open.spotify.com/episode/4vEi1DDMvb7f9ElVvR8fbG?si=486c268d3a5a418a', apple: 'https://podcasts.apple.com/us/podcast/dptr-dam-and-people-talk-relationships/id1896800781?i=1000784996736' },
+      { number: '13', title: 'Roles in Relationships', image: episode13Cover, spotify: 'https://open.spotify.com/episode/2jpi3b7YqGm9XQaWvrw0kL?si=0Llk7fGyTi2p31NFrtmSwA' },
     ],
   },
   experience: [

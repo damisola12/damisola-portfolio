@@ -7,6 +7,7 @@ import {
   Menu,
   X,
 } from 'lucide-react';
+import { SiApplepodcasts, SiSpotify } from 'react-icons/si';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -292,7 +293,7 @@ function Podcast() {
           <div className="reveal">
             <div className="relative">
               <div className="absolute -right-4 -top-4 h-24 w-24 border-r border-t border-[#c9a76a]" />
-              <img src={siteContent.podcast.image} alt="Oluwadamisola with a group of people, representing the conversations behind Dam and People Talk Relationship" loading="lazy" className="relative aspect-[4/5] w-full object-cover" data-testid="img-podcast" />
+              <img src={siteContent.podcast.image} alt="Dam and People Talk Relationship podcast artwork" loading="lazy" className="relative aspect-square w-full bg-[#102e29] object-contain p-2" data-testid="img-podcast" />
             </div>
             <p className="mt-5 max-w-xs font-mono-custom text-[10px] uppercase leading-5 tracking-[0.12em] text-[#d6d0c4]/65">A listening space for the people, questions and relationships that stay with us.</p>
           </div>
@@ -300,23 +301,33 @@ function Podcast() {
             <p className="eyebrow text-[#d9b979]">The show</p>
             <h3 className="mt-4 max-w-2xl font-display text-4xl leading-[.98] text-[#f5f0e6] sm:text-6xl">{siteContent.podcast.tagline}</h3>
             <p className="mt-6 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#d6d0c4]/65">{siteContent.podcast.host}</p>
-            <a href={siteContent.podcast.link} className="mt-9 inline-flex items-center gap-2 border-b border-[#d9b979] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] transition-colors hover:text-[#f5f0e6]" data-testid="link-podcast">Talk about the podcast <ExternalLink size={13} /></a>
+            <a href={siteContent.podcast.link} target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-2 border-b border-[#d9b979] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] transition-colors hover:text-[#f5f0e6]" data-testid="link-podcast">Listen to the podcast <ExternalLink size={13} /></a>
             <div className="mt-16 border-t border-[#f5f0e6]/20">
               <div className="flex items-center justify-between border-b border-[#f5f0e6]/20 py-5">
-                <p className="eyebrow text-[#d6d0c4]/60">Conversations to come</p>
-                <span className="font-mono-custom text-[10px] text-[#d9b979]">01—03</span>
+                <p className="eyebrow text-[#d6d0c4]/60">Listen to latest episodes</p>
+                <span className="font-mono-custom text-[10px] text-[#d9b979]">13—15</span>
               </div>
               {siteContent.podcast.episodes.map((episode) => (
-                <div key={episode.number} className="grid gap-3 border-b border-[#f5f0e6]/15 py-5 sm:grid-cols-[50px_1fr] sm:gap-7">
-                  <span className="font-mono-custom text-[10px] text-[#d9b979]">{episode.number}</span>
+                <div key={episode.number} className="grid grid-cols-[64px_1fr] gap-4 border-b border-[#f5f0e6]/15 py-5 sm:grid-cols-[72px_1fr_auto] sm:items-center sm:gap-6">
+                  <img src={episode.image} alt={`${episode.title} episode cover`} loading="lazy" className="h-16 w-16 object-cover sm:h-[4.5rem] sm:w-[4.5rem]" />
                   <div>
-                    <h4 className="font-display text-2xl text-[#f5f0e6]">{episode.title}</h4>
-                    <p className="mt-1 text-sm leading-6 text-[#d6d0c4]/65">{episode.copy}</p>
+                    <span className="font-mono-custom text-[10px] text-[#d9b979]">EPISODE {episode.number}</span>
+                    <h4 className="mt-1 font-display text-2xl text-[#f5f0e6]">{episode.title}</h4>
+                  </div>
+                  <div className="col-start-2 flex items-center gap-3 sm:col-start-auto">
+                    <a href={episode.spotify} target="_blank" rel="noreferrer" aria-label={`Listen to ${episode.title} on Spotify`} title="Listen on Spotify" className="text-[#1ed760] transition-transform hover:scale-110" data-testid={`link-episode-${episode.number}-spotify`}>
+                      <SiSpotify size={23} />
+                    </a>
+                    {episode.apple && (
+                      <a href={episode.apple} target="_blank" rel="noreferrer" aria-label={`Listen to ${episode.title} on Apple Podcasts`} title="Listen on Apple Podcasts" className="text-[#b874ff] transition-transform hover:scale-110" data-testid={`link-episode-${episode.number}-apple`}>
+                        <SiApplepodcasts size={23} />
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
-            <p className="mt-6 font-mono-custom text-[10px] uppercase leading-5 tracking-[0.1em] text-[#d6d0c4]/45">Podcast artwork, listening links and episode archive can be updated in the editable content file.</p>
+            <p className="mt-6 font-mono-custom text-[10px] uppercase leading-5 tracking-[0.1em] text-[#d6d0c4]/45">New episodes and listening links can be updated in the editable content file.</p>
           </div>
         </div>
       </div>
