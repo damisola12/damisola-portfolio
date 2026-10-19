@@ -1,4 +1,5 @@
 import heroImage from '@assets/Damisola_Image_(1)_1790002590467.jpeg';
+import logoImage from '@assets/IMG_5729.JPG_1792441268230.jpeg';
 import teachingImage from '@assets/eip_6_1790002640602.jpg';
 import aboutImage from '@assets/1_1790072863402.jpeg';
 import exploringImage from '@assets/2025_07_20_13_15_IMG_5664_1790072863403.JPG';
@@ -6,6 +7,11 @@ import festivalGroupImage from '@assets/2025_12_21_12_46_IMG_1366_1790072863404.
 import cultureImage from '@assets/IMG_8841_1790072863405.JPG';
 import danceImage from '@assets/IMG_9180.jpg_1790072863406.jpeg';
 import gatheringImage from '@assets/IMG_9212.jpg_1790072863407.jpeg';
+import tennisImage from '@assets/WhatsApp_Image_2026-09-22_at_11.55.35_1790152495376.jpeg';
+import gardenImage from '@assets/WhatsApp_Image_2026-09-22_at_12.05.08_1790152495379.jpeg';
+import eventImage from '@assets/WhatsApp_Image_2026-09-22_at_12.08.29_1790152495379.jpeg';
+import venueImage from '@assets/WhatsApp_Image_2026-09-22_at_12.09.29_1790152495380.jpeg';
+import outdoorImage from '@assets/WhatsApp_Image_2026-09-22_at_12.15.15_1790152495381.jpeg';
 import eseObaPoster from '@assets/Ese_Oba_Poster_1790070578683.jpg';
 import greenlightPoster from '@assets/Greenlight_Poster_1790070578686.jpg';
 import ktt60Poster from '@assets/KTT60_Poster_1790070578687.jpg';
@@ -34,6 +40,7 @@ export const siteContent = {
   title: 'Writer. Filmmaker. Producer. Creative.',
   location: 'Lagos, Nigeria',
   heroImage,
+  logoImage,
   images: { heroImage, aboutImage },
   intro: 'I turn ideas, stories and people into experiences worth remembering.',
   about: [
@@ -78,10 +85,10 @@ export const siteContent = {
     ],
   },
   experience: [
-    { category: 'Customer Success & Business Operations', org: 'Editable organisation', role: 'Editable role', dates: 'Editable dates', copy: 'Experience helping businesses adopt digital tools, organise operations and solve practical problems.', achievements: ['Adoption and onboarding', 'Process improvement', 'People-centred problem solving'] },
-    { category: 'Executive / Administrative Support', org: 'Editable organisation', role: 'Editable role', dates: 'Editable dates', copy: 'Calendar coordination, research, meeting documentation, stakeholder communication, project follow-up and executive support.', achievements: ['Clear documentation', 'Thoughtful follow-through', 'Reliable coordination'] },
-    { category: 'Creative Production', org: 'Delta Arts Entertainment', role: 'Writer / Producer', dates: 'Editable dates', copy: 'Writing, directing, production coordination, stakeholder management, sponsorship and partnerships.', achievements: ['Story development', 'Production planning', 'Creative partnerships'] },
-    { category: 'Education', org: 'Editable organisation', role: 'STEM & language educator', dates: 'Editable dates', copy: 'STEM teaching, chemistry education and language teaching.', achievements: ['Chemistry education', 'Yoruba language teaching', 'Accessible learning'] },
+    { category: 'Customer Success & Business Operations', org: '', role: '', dates: '', copy: 'Experience helping businesses adopt digital tools, organise operations and solve practical problems.', achievements: ['Adoption and onboarding', 'Process improvement', 'People-centred problem solving'] },
+    { category: 'Executive / Administrative Support', org: '', role: '', dates: '', copy: 'Calendar coordination, research, meeting documentation, stakeholder communication, project follow-up and executive support.', achievements: ['Clear documentation', 'Thoughtful follow-through', 'Reliable coordination'] },
+    { category: 'Creative Production', org: 'Delta Arts Entertainment', role: 'Writer / Producer', dates: '', copy: 'Writing, directing, production coordination, stakeholder management, sponsorship and partnerships.', achievements: ['Story development', 'Production planning', 'Creative partnerships'] },
+    { category: 'Education', org: '', role: 'STEM & language educator', dates: '', copy: 'STEM teaching, chemistry education and language teaching.', achievements: ['Chemistry education', 'Yoruba language teaching', 'Accessible learning'] },
   ],
   skills: {
     Creative: ['Screenwriting', 'Playwriting', 'Story Development', 'Acting', 'Directing', 'Film Production', 'Theatre Production', 'Creative Strategy'],
@@ -95,8 +102,13 @@ export const siteContent = {
     { image: exploringImage },
     { image: gatheringImage },
     { image: cultureImage },
+    { image: tennisImage },
+    { image: gardenImage },
+    { image: eventImage },
+    { image: venueImage },
+    { image: outdoorImage },
   ] as LeisureItem[],
-  facts: ['I like good stories.', 'I enjoy conversations that go somewhere.', 'I believe creative work should still solve real problems.', 'I like people.', 'I enjoy building things from scratch.', 'I ask a lot of questions.', 'I take ideas seriously, but I do not take myself too seriously.'],
+  facts: ['I LOVE ANIMALS.', 'I like good stories.', 'I enjoy conversations that go somewhere.', 'I believe creative work should still solve real problems.', 'I like people.', 'I enjoy building things from scratch.', 'I ask a lot of questions.', 'I take ideas seriously, but I do not take myself too seriously.'],
   achievements: [
     { value: '10+', label: 'Years writing stories' },
     { value: '15+', label: 'Scripts developed' },
@@ -104,7 +116,16 @@ export const siteContent = {
     { value: '1,500+', label: 'Audience reached at TAAAM' },
     { value: '90%+', label: 'Audience satisfaction from selected productions' },
   ],
-  testimonials: [{ quote: 'You’re such a kind man, you care deeply about your students and about just anyone, and not in a way that seems glaring, in subtle ways that often go unnoticed.', name: 'Blossom Omoruyi', role: '', organisation: '' }],
+  testimonials: [
+    { quote: 'You’re such a kind man, you care deeply about your students and about just anyone, and not in a way that seems glaring, in subtle ways that often go unnoticed.', name: 'Blossom Omoruyi', role: '', organisation: '' },
+    { quote: 'Damisola is such a life of the party, no dull moments around him and he argues A LOT! Cool guy.', name: 'Anonymous', role: '', organisation: '' },
+    { quote: 'His love language is definitely showing up with those little things that you didn’t think you needed.', name: 'Anonymous', role: '', organisation: '' },
+  ],
+  playlist: {
+    title: 'The soundtrack',
+    copy: 'A little playlist for the rooms, road trips and in-between moments.',
+    link: 'https://open.spotify.com/playlist/5VzzOeqVXHptjPTdPdiX1Y?si=b7d2e5cfe13e4124',
+  },
   contact: {
     email: 'adeyinkadamisola@gmail.com',
     phone: '+2348101344189',

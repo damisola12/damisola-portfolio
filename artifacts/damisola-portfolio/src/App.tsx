@@ -43,8 +43,8 @@ function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-20 text-[#f5f0e6]">
       <div className="section-wrap flex h-20 items-center justify-between">
-        <a href="#top" onClick={closeMenu} className="group" data-testid="link-logo">
-          <span className="font-display text-xl tracking-tight">OA<span className="text-[#c9a76a]">.</span></span>
+        <a href="#top" onClick={closeMenu} className="group flex items-center" data-testid="link-logo">
+          <img src={siteContent.logoImage} alt={`${siteContent.name} logo`} className="h-7 w-[22px] object-cover" />
           <span className="ml-3 hidden font-mono-custom text-[10px] uppercase tracking-[0.2em] text-[#d6d0c4]/70 sm:inline">personal studio</span>
         </a>
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
@@ -208,7 +208,6 @@ function ProjectModal({ project, onClose }: { project: typeof siteContent.projec
           <p className="mt-8 text-base leading-7 text-[#385c53]">{project.details}</p>
           <p className="mt-5 text-sm leading-6 text-[#385c53]/75">{project.description}</p>
           <div className="mt-10 flex items-center gap-4 border-t border-[#183c34]/15 pt-5">
-            <span className="eyebrow text-[#385c53]/65">Project details are editable in source</span>
             <button type="button" onClick={onClose} className="ml-auto inline-flex items-center gap-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:text-[#b89457]" data-testid="button-return-projects">Close <X size={13} /></button>
           </div>
         </div>
@@ -342,19 +341,22 @@ function Experience() {
           <p>Different titles, same instinct: notice what people need, bring order to the moving parts, and help good work reach the people it is for.</p>
         </SectionIntro>
         <div className="border-t border-[#183c34]/20">
-          {siteContent.experience.map((item, index) => (
-            <details key={item.category} className="group border-b border-[#183c34]/20" open={index === 0}>
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-5 py-6 marker:hidden">
-                <div className="flex items-start gap-5 sm:items-center sm:gap-12"><span className="font-mono-custom text-[10px] text-[#b89457]">0{index + 1}</span><h3 className="font-display text-2xl text-[#183c34] sm:text-3xl">{item.category}</h3></div>
-                <ChevronDown size={19} strokeWidth={1.4} className="shrink-0 text-[#385c53] transition-transform group-open:rotate-180" />
-              </summary>
-              <div className="grid gap-7 pb-8 pl-10 sm:grid-cols-[180px_1fr] sm:pl-[4.4rem] lg:grid-cols-[220px_1fr_1fr]">
-                <div className="font-mono-custom text-[10px] uppercase leading-6 tracking-[0.1em] text-[#385c53]/70"><p>{item.org}</p><p>{item.role}</p><p>{item.dates}</p></div>
-                <p className="max-w-md text-sm leading-7 text-[#385c53]">{item.copy}</p>
-                <ul className="space-y-2 text-sm text-[#183c34]">{item.achievements.map((achievement) => <li key={achievement} className="flex items-center gap-2"><Check size={14} className="text-[#b89457]" strokeWidth={1.5} />{achievement}</li>)}</ul>
-              </div>
-            </details>
-          ))}
+          {siteContent.experience.map((item, index) => {
+            const metadata = [item.org, item.role, item.dates].filter(Boolean);
+            return (
+              <details key={item.category} className="group border-b border-[#183c34]/20" open={index === 0}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 py-6 marker:hidden">
+                  <div className="flex items-start gap-5 sm:items-center sm:gap-12"><span className="font-mono-custom text-[10px] text-[#b89457]">0{index + 1}</span><h3 className="font-display text-2xl text-[#183c34] sm:text-3xl">{item.category}</h3></div>
+                  <ChevronDown size={19} strokeWidth={1.4} className="shrink-0 text-[#385c53] transition-transform group-open:rotate-180" />
+                </summary>
+                <div className={`grid gap-7 pb-8 pl-10 sm:pl-[4.4rem] ${metadata.length ? 'sm:grid-cols-[180px_1fr] lg:grid-cols-[220px_1fr_1fr]' : 'sm:grid-cols-2'}`}>
+                  {metadata.length > 0 && <div className="font-mono-custom text-[10px] uppercase leading-6 tracking-[0.1em] text-[#385c53]/70">{metadata.map((detail) => <p key={detail}>{detail}</p>)}</div>}
+                  <p className="max-w-md text-sm leading-7 text-[#385c53]">{item.copy}</p>
+                  <ul className="space-y-2 text-sm text-[#183c34]">{item.achievements.map((achievement) => <li key={achievement} className="flex items-center gap-2"><Check size={14} className="text-[#b89457]" strokeWidth={1.5} />{achievement}</li>)}</ul>
+                </div>
+              </details>
+            );
+          })}
         </div>
         <div className="mt-16 grid gap-8 border-t border-[#183c34]/20 pt-10 lg:grid-cols-[180px_1fr]">
           <span className="eyebrow text-[#385c53]/70">Skills</span>
@@ -412,7 +414,7 @@ function AppContent() {
     const twitterDescription = document.querySelector('meta[name="twitter:description"]') || document.createElement('meta');
     twitterDescription.setAttribute('name', 'twitter:description'); twitterDescription.setAttribute('content', description); document.head.appendChild(twitterDescription);
     const icon = document.querySelector('link[rel="icon"]') || document.createElement('link');
-    icon.setAttribute('rel', 'icon'); icon.setAttribute('href', `${import.meta.env.BASE_URL}favicon.svg`); document.head.appendChild(icon);
+    icon.setAttribute('rel', 'icon'); icon.setAttribute('type', 'image/png'); icon.setAttribute('href', `${import.meta.env.BASE_URL}damisola-favicon.png`); document.head.appendChild(icon);
   }, []);
   return (
     <div className="grain min-h-[100dvh]">
@@ -442,10 +444,29 @@ function AppContent() {
             </div>
             <div className="mt-24 grid gap-10 border-t border-[#183c34]/20 pt-7 lg:grid-cols-[180px_1fr]">
               <span className="eyebrow text-[#385c53]/70">Kind words</span>
-              <div className="max-w-2xl">
-                <p className="font-display text-3xl leading-tight text-[#183c34]">“{siteContent.testimonials[0].quote}”</p>
-                <p className="mt-5 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#385c53]/70">{[siteContent.testimonials[0].name, siteContent.testimonials[0].role, siteContent.testimonials[0].organisation].filter(Boolean).join(' · ')}</p>
+              <div className="grid gap-8 sm:grid-cols-3">
+                {siteContent.testimonials.map((testimonial) => (
+                  <blockquote key={testimonial.quote} className="border-t border-[#183c34]/20 pt-5">
+                    <p className="font-display text-2xl leading-tight text-[#183c34]">“{testimonial.quote}”</p>
+                    <cite className="mt-5 block font-mono-custom text-[10px] uppercase not-italic tracking-[0.12em] text-[#385c53]/70">{[testimonial.name, testimonial.role, testimonial.organisation].filter(Boolean).join(' · ')}</cite>
+                  </blockquote>
+                ))}
               </div>
+            </div>
+            <div className="mt-20 grid gap-8 border-t border-[#183c34]/20 pt-7 lg:grid-cols-[180px_1fr]">
+              <span className="eyebrow text-[#385c53]/70">Soundtrack</span>
+              <a href={siteContent.playlist.link} target="_blank" rel="noreferrer" className="group flex max-w-3xl items-center justify-between gap-6 bg-[#183c34] p-6 text-[#f5f0e6] transition-colors hover:bg-[#102e29] sm:p-8" data-testid="link-spotify-playlist">
+                <div className="flex items-start gap-5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-[#1ed760] text-[#102e29]"><SiSpotify size={24} /></span>
+                  <div>
+                    <p className="eyebrow text-[#d9b979]">Personal playlist</p>
+                    <h3 className="mt-2 font-display text-3xl leading-none">{siteContent.playlist.title}</h3>
+                    <p className="mt-3 max-w-md text-sm leading-6 text-[#d6d0c4]/70">{siteContent.playlist.copy}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979]">Open playlist <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></span>
+                  </div>
+                </div>
+                <SiSpotify size={30} className="hidden shrink-0 text-[#1ed760] sm:block" />
+              </a>
             </div>
           </div>
         </section>
