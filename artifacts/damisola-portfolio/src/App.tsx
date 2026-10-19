@@ -272,7 +272,7 @@ function Ventures() {
               <div className="mt-9 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                 {siteContent.ventures.delta.cards.map((card) => <div key={card} className="border-l-2 border-[#c9a76a] pl-3 text-sm text-[#183c34]">{card}</div>)}
               </div>
-              <a href={siteContent.ventures.delta.link} className="mt-10 inline-flex items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-delta-arts">Ask about Delta Arts <ExternalLink size={13} /></a>
+              <a href={siteContent.ventures.delta.link} target="_blank" rel="noreferrer" className="mt-10 inline-flex min-h-11 items-center gap-2 border-b border-[#183c34] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#183c34] hover:border-[#b89457] hover:text-[#b89457]" data-testid="link-delta-arts">Visit Delta Arts <ExternalLink size={13} /></a>
             </div>
           </article>
         </div>

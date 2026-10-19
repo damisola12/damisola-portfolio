@@ -68,7 +68,7 @@ export const siteContent = {
     { id: 'i-find-the-defendant', title: 'I Find the Defendant', year: '2026', medium: 'Short Film', role: 'Writer', description: 'A short film built around memory, perspective and the Rashomon effect.', image: iftdPoster, details: 'A short film written by Oluwadamisola Adeyinka.' },
   ],
   ventures: {
-    delta: { title: 'Delta Arts Entertainment', tagline: 'Film | Theatre | Media.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', logo: deltaArtsLogo, link: 'mailto:adeyinkadamisola@gmail.com', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
+    delta: { title: 'Delta Arts Entertainment', tagline: 'Film | Theatre | Media.', copy: 'A creative production company focused on theatre, film, storytelling, events and original experiences.', logo: deltaArtsLogo, link: 'https://delta-arts.vercel.app', cards: ['Theatre & live production', 'Film & story development', 'Events & original experiences'] },
   },
   podcast: {
     title: 'Dam and People Talk Relationship',
