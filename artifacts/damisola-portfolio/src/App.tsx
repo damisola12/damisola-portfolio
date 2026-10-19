@@ -57,15 +57,15 @@ function Header() {
         <a href={`mailto:${siteContent.contact.email}`} className="hidden items-center gap-2 border-b border-[#c9a76a] pb-1 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#f5f0e6] transition-colors hover:text-[#d9b979] sm:flex" data-testid="link-header-email">
           Start a conversation <ArrowUpRight size={13} strokeWidth={1.5} />
         </a>
-        <button type="button" onClick={() => setOpen(!open)} className="rounded-sm p-2 lg:hidden" aria-label={open ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={open} data-testid="button-menu">
+        <button type="button" onClick={() => setOpen(!open)} className="flex min-h-11 min-w-11 items-center justify-center rounded-sm p-2 lg:hidden" aria-label={open ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={open} data-testid="button-menu">
           {open ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
         </button>
       </div>
       {open && (
-        <nav className="border-t border-[#d6d0c4]/20 bg-[#102e29] px-8 py-6 lg:hidden" aria-label="Mobile navigation">
-          <div className="flex flex-col gap-5">
+        <nav className="border-t border-[#d6d0c4]/20 bg-[#102e29] px-5 py-5 sm:px-8 sm:py-6 lg:hidden" aria-label="Mobile navigation">
+          <div className="flex flex-col gap-2 sm:gap-5">
             {navigation.map(([label, href]) => (
-              <a key={href} href={href} onClick={closeMenu} className="font-display text-2xl text-[#f5f0e6] transition-colors hover:text-[#d9b979]" data-testid={`link-mobile-${label.toLowerCase()}`}>{label}</a>
+              <a key={href} href={href} onClick={closeMenu} className="inline-flex min-h-11 items-center font-display text-xl text-[#f5f0e6] transition-colors hover:text-[#d9b979] sm:text-2xl" data-testid={`link-mobile-${label.toLowerCase()}`}>{label}</a>
             ))}
           </div>
         </nav>
@@ -76,32 +76,32 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative isolate min-h-[700px] overflow-hidden bg-[#102e29] text-[#f5f0e6] lg:min-h-[780px]">
+    <section id="top" className="relative isolate min-h-[min(700px,100svh)] overflow-hidden bg-[#102e29] text-[#f5f0e6] lg:min-h-[780px]">
       <div className="absolute inset-0 lg:left-[37%]">
         <img src={siteContent.heroImage} alt="Oluwadamisola Adeyinka smiling in a bright floral shirt" className="hero-photo h-full w-full object-cover object-[center_18%] opacity-80 lg:opacity-100" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#102e29] via-[#102e29]/65 to-transparent lg:from-[#102e29] lg:via-[#102e29]/35 lg:to-transparent" />
         <div className="absolute inset-0 bg-[#102e29]/20" />
       </div>
-      <div className="relative mx-auto flex min-h-[700px] w-full max-w-[90rem] items-end px-5 pb-12 pt-28 sm:px-10 lg:min-h-[780px] lg:items-center lg:px-20 lg:pb-0">
-        <div className="max-w-[690px]">
-          <div className="reveal mb-7 flex items-center gap-3 text-[#d9b979]">
-            <span className="h-px w-10 bg-[#d9b979]" />
-            <span className="eyebrow">Lagos, Nigeria · Personal studio</span>
+      <div className="relative mx-auto flex min-h-[min(700px,100svh)] w-full max-w-[90rem] flex-col items-start justify-end px-5 pb-10 pt-28 sm:px-10 sm:pb-12 lg:min-h-[780px] lg:flex-row lg:items-center lg:justify-start lg:px-20 lg:pb-0">
+        <div className="w-full min-w-0 max-w-[690px]">
+          <div className="reveal mb-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[#d9b979] sm:mb-7">
+            <span className="h-px w-8 shrink-0 bg-[#d9b979] sm:w-10" />
+            <span className="min-w-0 font-mono-custom text-[10px] uppercase leading-[1.8] tracking-[0.1em] sm:text-xs sm:tracking-[0.14em]">Lagos, Nigeria · Personal studio</span>
           </div>
-          <h1 className="reveal reveal-delay-1 font-display text-[clamp(3.7rem,10vw,8.75rem)] leading-[.86] tracking-[-0.06em] text-[#f5f0e6]">
+          <h1 className="reveal reveal-delay-1 font-display text-[clamp(2.2rem,11vw,8.75rem)] leading-[.9] tracking-[-0.06em] text-[#f5f0e6]">
             Oluwadamisola <em className="text-[#d9b979]">Adeyinka</em>
           </h1>
-          <p className="reveal reveal-delay-2 mt-8 max-w-md font-mono-custom text-[11px] uppercase leading-[1.9] tracking-[0.16em] text-[#f5f0e6]/75 sm:text-xs">
+          <p className="reveal reveal-delay-2 mt-7 max-w-md font-mono-custom text-[10px] uppercase leading-[1.8] tracking-[0.1em] text-[#f5f0e6]/75 sm:mt-8 sm:text-xs sm:tracking-[0.16em]">
             {siteContent.title}
           </p>
-          <p className="reveal reveal-delay-2 mt-5 max-w-lg font-display text-2xl leading-tight text-[#f5f0e6] sm:text-3xl">
+          <p className="reveal reveal-delay-2 mt-5 max-w-lg font-display text-[clamp(1.25rem,5.5vw,1.875rem)] leading-tight text-[#f5f0e6]">
             {siteContent.intro}
           </p>
-          <div className="reveal reveal-delay-3 mt-9 flex flex-wrap items-center gap-6">
-            <a href="#work" className="group inline-flex items-center gap-3 border border-[#d9b979] bg-[#d9b979] px-5 py-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#102e29] transition-colors hover:bg-transparent hover:text-[#f5f0e6]" data-testid="link-explore-work">
+          <div className="reveal reveal-delay-3 mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <a href="#work" className="group inline-flex min-h-11 items-center gap-3 border border-[#d9b979] bg-[#d9b979] px-4 py-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#102e29] transition-colors hover:bg-transparent hover:text-[#f5f0e6] sm:px-5" data-testid="link-explore-work">
               Explore my work <ArrowUpRight size={15} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
-            <a href={`mailto:${siteContent.contact.email}`} className="inline-flex items-center gap-3 border-b border-[#f5f0e6]/50 pb-2 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#f5f0e6] transition-colors hover:border-[#d9b979] hover:text-[#d9b979]" data-testid="link-hero-email">
+            <a href={`mailto:${siteContent.contact.email}`} className="inline-flex min-h-11 items-center gap-3 border-b border-[#f5f0e6]/50 py-2 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-[#f5f0e6] transition-colors hover:border-[#d9b979] hover:text-[#d9b979]" data-testid="link-hero-email">
               Get in touch <ArrowUpRight size={15} strokeWidth={1.5} />
             </a>
           </div>
@@ -116,13 +116,13 @@ function Hero() {
 
 function SectionIntro({ number, label, title, children, dark = false }: { number: string; label: string; title: string; children?: React.ReactNode; dark?: boolean }) {
   return (
-    <div className={`mb-14 grid gap-7 lg:grid-cols-[180px_1fr] lg:gap-16 ${dark ? 'text-[#f5f0e6]' : ''}`}>
+    <div className={`mb-10 grid gap-7 sm:mb-14 lg:grid-cols-[180px_1fr] lg:gap-16 ${dark ? 'text-[#f5f0e6]' : ''}`}>
       <div className="flex items-start gap-3">
         <span className="font-mono-custom text-xs text-[#b89457]">{number}</span>
         <span className={`eyebrow ${dark ? 'text-[#d6d0c4]/65' : 'text-[#385c53]/70'}`}>{label}</span>
       </div>
       <div>
-        <h2 className="font-display text-[clamp(2.7rem,6vw,5.5rem)] leading-[.94] tracking-[-0.05em]">{title}</h2>
+        <h2 className="font-display text-[clamp(2.25rem,6vw,5.5rem)] leading-[.94] tracking-[-0.05em]">{title}</h2>
         {children && <div className="mt-6 max-w-xl text-base leading-7 text-current/70">{children}</div>}
       </div>
     </div>
@@ -131,7 +131,7 @@ function SectionIntro({ number, label, title, children, dark = false }: { number
 
 function About() {
   return (
-    <section id="about" className="bg-[#f5f0e6] py-24 sm:py-32">
+    <section id="about" className="bg-[#f5f0e6] py-16 sm:py-24 lg:py-32">
       <div className="section-wrap">
         <SectionIntro number="01" label="A little context" title="Who I am">
           <p>I work across storytelling, film, theatre, creative production, business and people-focused work. The common thread is always the same: making meaning, then making it matter.</p>
@@ -161,7 +161,7 @@ function About() {
 
 function Journey() {
   return (
-    <section id="journey" className="bg-[#e7dfcf] py-24 sm:py-32">
+    <section id="journey" className="bg-[#e7dfcf] py-16 sm:py-24 lg:py-32">
       <div className="section-wrap">
         <SectionIntro number="02" label="The thread so far" title="A story in progress">
           <p>Not a straight line. More like a collection of rooms, each teaching me something useful about ideas, people and the work of bringing both together.</p>
@@ -179,7 +179,7 @@ function Journey() {
                   <p className="font-display text-2xl text-[#183c34] sm:text-3xl">{item.title}</p>
                   <p className="mt-2 max-w-xl text-sm leading-6 text-[#385c53]/80">{item.copy}</p>
                 </div>
-                <span className="absolute right-0 top-8 font-mono-custom text-[10px] text-[#385c53]/50">0{index + 1}</span>
+                <span className="absolute right-0 top-8 hidden font-mono-custom text-[10px] text-[#385c53]/50 sm:block">0{index + 1}</span>
               </div>
             ))}
           </div>
@@ -197,13 +197,13 @@ function ProjectModal({ project, onClose }: { project: typeof siteContent.projec
     return () => { document.removeEventListener('keydown', onKeyDown); document.body.style.overflow = ''; };
   }, [onClose]);
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#102e29]/80 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="project-title" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <div className="relative grid max-h-[90vh] w-full max-w-4xl overflow-auto bg-[#f5f0e6] md:grid-cols-[.8fr_1fr]">
-        <button type="button" onClick={onClose} className="absolute right-4 top-4 z-10 border border-[#f5f0e6]/30 bg-[#102e29] p-2 text-[#f5f0e6] transition-colors hover:bg-[#c9a76a] hover:text-[#102e29]" aria-label="Close project details" data-testid="button-close-project"><X size={18} strokeWidth={1.5} /></button>
-        <img src={project.image} alt={`${project.title} project`} className="h-64 w-full bg-[#31574d] object-contain p-2 md:h-full" />
-        <div className="p-7 sm:p-12">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#102e29]/80 p-3 backdrop-blur-sm sm:p-4" role="dialog" aria-modal="true" aria-labelledby="project-title" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+      <div className="relative grid max-h-[90dvh] w-full max-w-4xl grid-cols-1 overflow-auto overscroll-contain bg-[#f5f0e6] md:grid-cols-[.8fr_1fr]">
+        <button type="button" onClick={onClose} className="absolute right-3 top-3 z-10 flex min-h-11 min-w-11 items-center justify-center border border-[#f5f0e6]/30 bg-[#102e29] p-2 text-[#f5f0e6] transition-colors hover:bg-[#c9a76a] hover:text-[#102e29] sm:right-4 sm:top-4" aria-label="Close project details" data-testid="button-close-project"><X size={18} strokeWidth={1.5} /></button>
+        <img src={project.image} alt={`${project.title} project`} className="h-52 w-full bg-[#31574d] object-contain p-2 sm:h-64 md:h-full" />
+        <div className="min-w-0 p-5 sm:p-12">
           <p className="eyebrow text-[#b89457]">{project.year} · {project.medium}</p>
-          <h2 id="project-title" className="mt-4 font-display text-5xl leading-none tracking-tight text-[#183c34]">{project.title}</h2>
+          <h2 id="project-title" className="mt-3 break-words font-display text-[clamp(2.1rem,9vw,3rem)] leading-none tracking-tight text-[#183c34] sm:mt-4">{project.title}</h2>
           <p className="mt-5 font-mono-custom text-xs uppercase tracking-[0.1em] text-[#385c53]">{project.role}</p>
           <p className="mt-8 text-base leading-7 text-[#385c53]">{project.details}</p>
           <p className="mt-5 text-sm leading-6 text-[#385c53]/75">{project.description}</p>
@@ -219,7 +219,7 @@ function ProjectModal({ project, onClose }: { project: typeof siteContent.projec
 function CreativeWork() {
   const [selected, setSelected] = useState<typeof siteContent.projects[number] | null>(null);
   return (
-    <section id="work" className="bg-[#183c34] py-24 text-[#f5f0e6] sm:py-32">
+    <section id="work" className="bg-[#183c34] py-16 text-[#f5f0e6] sm:py-24 lg:py-32">
       <div className="section-wrap">
         <SectionIntro number="03" label="Creative work" title="Stories I tell" dark>
           <p>Stage. Screen. People. Culture. The projects change shape, but I keep returning to stories with a pulse — stories that leave a little room for the audience to find themselves.</p>
@@ -229,7 +229,7 @@ function CreativeWork() {
             <button type="button" key={project.id} onClick={() => setSelected(project)} className={`project-image group text-left ${index === 0 ? 'lg:col-span-7' : index === 1 ? 'lg:col-span-5 lg:mt-20' : index === 2 ? 'lg:col-span-5' : index === 3 ? 'lg:col-span-4 lg:mt-16' : 'lg:col-span-3'}`} data-testid={`button-project-${project.id}`}>
               <div className={`relative overflow-hidden bg-[#31574d] ${index === 0 ? 'aspect-[1.2/1]' : index === 1 ? 'aspect-[.92/1]' : 'aspect-[4/5]'}`}>
                 <img src={project.image} alt={`${project.title}, ${project.medium}`} loading="lazy" className="h-full w-full object-contain opacity-90" />
-                <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center bg-[#d9b979] text-[#183c34] opacity-0 transition-opacity group-hover:opacity-100"><ArrowUpRight size={17} strokeWidth={1.5} /></span>
+                <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center bg-[#d9b979] text-[#183c34] opacity-100 transition-opacity sm:right-4 sm:top-4 sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-visible:opacity-100"><ArrowUpRight size={17} strokeWidth={1.5} /></span>
               </div>
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div>
@@ -254,7 +254,7 @@ function CreativeWork() {
 
 function Ventures() {
   return (
-    <section id="creative" className="bg-[#f5f0e6] py-24 sm:py-32">
+    <section id="creative" className="bg-[#f5f0e6] py-16 sm:py-24 lg:py-32">
       <div className="section-wrap">
         <SectionIntro number="04" label="The company" title="Making room for ideas" />
         <div className="max-w-4xl border-y border-[#183c34]/20">
@@ -266,7 +266,7 @@ function Ventures() {
             </div>
             <div>
               <p className="eyebrow text-[#b89457]">Creative production company</p>
-              <h3 className="mt-4 font-display text-4xl leading-none text-[#183c34]">{siteContent.ventures.delta.title}</h3>
+              <h3 className="mt-4 font-display text-3xl leading-none text-[#183c34] sm:text-4xl">{siteContent.ventures.delta.title}</h3>
               <p className="mt-5 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#385c53]">{siteContent.ventures.delta.tagline}</p>
               <p className="mt-7 max-w-md text-sm leading-7 text-[#385c53]/80">{siteContent.ventures.delta.copy}</p>
               <div className="mt-9 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
@@ -283,7 +283,7 @@ function Ventures() {
 
 function Podcast() {
   return (
-    <section id="podcast" className="bg-[#102e29] py-24 text-[#f5f0e6] sm:py-32">
+    <section id="podcast" className="bg-[#102e29] py-16 text-[#f5f0e6] sm:py-24 lg:py-32">
       <div className="section-wrap">
         <SectionIntro number="05" label="The conversations" title={siteContent.podcast.title} dark>
           <p>{siteContent.podcast.copy}</p>
@@ -298,7 +298,7 @@ function Podcast() {
           </div>
           <div className="reveal reveal-delay-1">
             <p className="eyebrow text-[#d9b979]">The show</p>
-            <h3 className="mt-4 max-w-2xl font-display text-4xl leading-[.98] text-[#f5f0e6] sm:text-6xl">{siteContent.podcast.tagline}</h3>
+            <h3 className="mt-4 max-w-2xl font-display text-[clamp(1.85rem,9vw,3rem)] leading-[.98] text-[#f5f0e6] sm:text-6xl">{siteContent.podcast.tagline}</h3>
             <p className="mt-6 font-mono-custom text-xs uppercase tracking-[0.14em] text-[#d6d0c4]/65">{siteContent.podcast.host}</p>
             <a href={siteContent.podcast.link} target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-2 border-b border-[#d9b979] pb-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979] transition-colors hover:text-[#f5f0e6]" data-testid="link-podcast">Listen to the podcast <ExternalLink size={13} /></a>
             <div className="mt-16 border-t border-[#f5f0e6]/20">
@@ -307,18 +307,18 @@ function Podcast() {
                 <span className="font-mono-custom text-[10px] text-[#d9b979]">13—15</span>
               </div>
               {siteContent.podcast.episodes.map((episode) => (
-                <div key={episode.number} className="grid grid-cols-[64px_1fr] gap-4 border-b border-[#f5f0e6]/15 py-5 sm:grid-cols-[72px_1fr_auto] sm:items-center sm:gap-6">
-                  <img src={episode.image} alt={`${episode.title} episode cover`} loading="lazy" className="h-16 w-16 object-cover sm:h-[4.5rem] sm:w-[4.5rem]" />
-                  <div>
+                <div key={episode.number} className="grid grid-cols-[3.5rem_minmax(0,1fr)] gap-3 border-b border-[#f5f0e6]/15 py-5 sm:grid-cols-[72px_minmax(0,1fr)_auto] sm:items-center sm:gap-6">
+                  <img src={episode.image} alt={`${episode.title} episode cover`} loading="lazy" className="h-14 w-14 object-cover sm:h-[4.5rem] sm:w-[4.5rem]" />
+                  <div className="min-w-0">
                     <span className="font-mono-custom text-[10px] text-[#d9b979]">EPISODE {episode.number}</span>
-                    <h4 className="mt-1 font-display text-2xl text-[#f5f0e6]">{episode.title}</h4>
+                    <h4 className="mt-1 break-words font-display text-xl leading-tight text-[#f5f0e6] sm:text-2xl">{episode.title}</h4>
                   </div>
                   <div className="col-start-2 flex items-center gap-3 sm:col-start-auto">
-                    <a href={episode.spotify} target="_blank" rel="noreferrer" aria-label={`Listen to ${episode.title} on Spotify`} title="Listen on Spotify" className="text-[#1ed760] transition-transform hover:scale-110" data-testid={`link-episode-${episode.number}-spotify`}>
+                    <a href={episode.spotify} target="_blank" rel="noreferrer" aria-label={`Listen to ${episode.title} on Spotify`} title="Listen on Spotify" className="flex min-h-11 min-w-11 items-center justify-center text-[#1ed760] transition-transform hover:scale-110" data-testid={`link-episode-${episode.number}-spotify`}>
                       <SiSpotify size={23} />
                     </a>
                     {episode.apple && (
-                      <a href={episode.apple} target="_blank" rel="noreferrer" aria-label={`Listen to ${episode.title} on Apple Podcasts`} title="Listen on Apple Podcasts" className="text-[#b874ff] transition-transform hover:scale-110" data-testid={`link-episode-${episode.number}-apple`}>
+                      <a href={episode.apple} target="_blank" rel="noreferrer" aria-label={`Listen to ${episode.title} on Apple Podcasts`} title="Listen on Apple Podcasts" className="flex min-h-11 min-w-11 items-center justify-center text-[#b874ff] transition-transform hover:scale-110" data-testid={`link-episode-${episode.number}-apple`}>
                         <SiApplepodcasts size={23} />
                       </a>
                     )}
@@ -335,7 +335,7 @@ function Podcast() {
 
 function Experience() {
   return (
-    <section id="experience" className="bg-[#e7dfcf] py-24 sm:py-32">
+    <section id="experience" className="bg-[#e7dfcf] py-16 sm:py-24 lg:py-32">
       <div className="section-wrap">
         <SectionIntro number="06" label="Professional life" title="The work behind the work">
           <p>Different titles, same instinct: notice what people need, bring order to the moving parts, and help good work reach the people it is for.</p>
@@ -346,7 +346,7 @@ function Experience() {
             return (
               <details key={item.category} className="group border-b border-[#183c34]/20" open={index === 0}>
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-5 py-6 marker:hidden">
-                  <div className="flex items-start gap-5 sm:items-center sm:gap-12"><span className="font-mono-custom text-[10px] text-[#b89457]">0{index + 1}</span><h3 className="font-display text-2xl text-[#183c34] sm:text-3xl">{item.category}</h3></div>
+                  <div className="flex min-w-0 items-start gap-4 sm:items-center sm:gap-12"><span className="font-mono-custom text-[10px] text-[#b89457]">0{index + 1}</span><h3 className="min-w-0 break-words font-display text-xl leading-tight text-[#183c34] sm:text-3xl">{item.category}</h3></div>
                   <ChevronDown size={19} strokeWidth={1.4} className="shrink-0 text-[#385c53] transition-transform group-open:rotate-180" />
                 </summary>
                 <div className={`grid gap-7 pb-8 pl-10 sm:pl-[4.4rem] ${metadata.length ? 'sm:grid-cols-[180px_1fr] lg:grid-cols-[220px_1fr_1fr]' : 'sm:grid-cols-2'}`}>
@@ -371,7 +371,7 @@ function Experience() {
 
 function Leisure() {
   return (
-    <section id="leisure" className="bg-[#f5f0e6] py-24 sm:py-32">
+    <section id="leisure" className="bg-[#f5f0e6] py-16 sm:py-24 lg:py-32">
       <div className="section-wrap">
         <SectionIntro number="07" label="Beyond the brief" title="When I’m not working">
           <p>There is a life around the work: giving back, long conversations, new places, familiar faces and the small details that become stories later.</p>
@@ -428,7 +428,7 @@ function AppContent() {
           <Podcast />
         <Experience />
         <Leisure />
-        <section className="bg-[#e7dfcf] py-24 sm:py-32">
+        <section className="bg-[#e7dfcf] py-16 sm:py-24 lg:py-32">
           <div className="section-wrap grid gap-16 lg:grid-cols-[.7fr_1.3fr]">
             <SectionIntro number="08" label="The human bit" title="A few things about me" />
             <div className="grid gap-x-10 gap-y-0 sm:grid-cols-2">
@@ -436,15 +436,15 @@ function AppContent() {
             </div>
           </div>
         </section>
-        <section className="bg-[#f5f0e6] py-24 sm:py-32">
+        <section className="bg-[#f5f0e6] py-16 sm:py-24 lg:py-32">
           <div className="section-wrap">
             <SectionIntro number="09" label="Selected highlights" title="Things worth noting" />
-            <div className="grid border-y border-[#183c34]/20 sm:grid-cols-5">
-              {siteContent.achievements.map((item) => <div key={item.label} className="border-b border-[#183c34]/20 py-7 sm:border-b-0 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-r-0"><p className="font-display text-4xl text-[#183c34]">{item.value}</p><p className="mt-2 max-w-[120px] text-xs leading-5 text-[#385c53]/75">{item.label}</p></div>)}
+            <div className="grid border-y border-[#183c34]/20 md:grid-cols-2 lg:grid-cols-5">
+              {siteContent.achievements.map((item) => <div key={item.label} className="border-b border-[#183c34]/20 py-6 md:px-5 md:[&:nth-child(5)]:border-b-0 lg:border-b-0 lg:border-r lg:py-7 lg:first:pl-0 lg:last:border-r-0"><p className="font-display text-4xl text-[#183c34]">{item.value}</p><p className="mt-2 max-w-[120px] text-xs leading-5 text-[#385c53]/75">{item.label}</p></div>)}
             </div>
             <div className="mt-24 grid gap-10 border-t border-[#183c34]/20 pt-7 lg:grid-cols-[180px_1fr]">
               <span className="eyebrow text-[#385c53]/70">Kind words</span>
-              <div className="grid gap-8 sm:grid-cols-3">
+              <div className="grid gap-8 lg:grid-cols-3">
                 {siteContent.testimonials.map((testimonial) => (
                   <blockquote key={testimonial.quote} className="border-t border-[#183c34]/20 pt-5">
                     <p className="font-display text-2xl leading-tight text-[#183c34]">“{testimonial.quote}”</p>
@@ -455,12 +455,12 @@ function AppContent() {
             </div>
             <div className="mt-20 grid gap-8 border-t border-[#183c34]/20 pt-7 lg:grid-cols-[180px_1fr]">
               <span className="eyebrow text-[#385c53]/70">Soundtrack</span>
-              <a href={siteContent.playlist.link} target="_blank" rel="noreferrer" className="group flex max-w-3xl items-center justify-between gap-6 bg-[#183c34] p-6 text-[#f5f0e6] transition-colors hover:bg-[#102e29] sm:p-8" data-testid="link-spotify-playlist">
-                <div className="flex items-start gap-5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-[#1ed760] text-[#102e29]"><SiSpotify size={24} /></span>
-                  <div>
+              <a href={siteContent.playlist.link} target="_blank" rel="noreferrer" className="group flex max-w-3xl items-center justify-between gap-3 bg-[#183c34] p-4 text-[#f5f0e6] transition-colors hover:bg-[#102e29] sm:gap-6 sm:p-8" data-testid="link-spotify-playlist">
+                <div className="flex min-w-0 items-start gap-3 sm:gap-5">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#1ed760] text-[#102e29] sm:h-11 sm:w-11"><SiSpotify size={24} /></span>
+                  <div className="min-w-0">
                     <p className="eyebrow text-[#d9b979]">Personal playlist</p>
-                    <h3 className="mt-2 font-display text-3xl leading-none">{siteContent.playlist.title}</h3>
+                    <h3 className="mt-2 break-words font-display text-[clamp(1.5rem,7vw,1.875rem)] leading-tight">{siteContent.playlist.title}</h3>
                     <p className="mt-3 max-w-md text-sm leading-6 text-[#d6d0c4]/70">{siteContent.playlist.copy}</p>
                     <span className="mt-5 inline-flex items-center gap-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d9b979]">Open playlist <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></span>
                   </div>
@@ -476,16 +476,16 @@ function AppContent() {
           <div>
             <p className="font-display text-2xl">Oluwadamisola Adeyinka<span className="text-[#d9b979]">.</span></p>
             <p className="mt-2 font-mono-custom text-[10px] uppercase tracking-[0.12em] text-[#d6d0c4]/60">Writer. Filmmaker. Producer. Creative.</p>
-            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/65">
-              <a href={`mailto:${siteContent.contact.email}`} className="transition-colors hover:text-[#d9b979]" data-testid="footer-email">{siteContent.contact.email}</a>
-              <a href={`tel:${siteContent.contact.phone}`} className="transition-colors hover:text-[#d9b979]" data-testid="footer-phone">{siteContent.contact.phone}</a>
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-1 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/65">
+              <a href={`mailto:${siteContent.contact.email}`} className="inline-flex min-h-11 items-center transition-colors hover:text-[#d9b979]" data-testid="footer-email">{siteContent.contact.email}</a>
+              <a href={`tel:${siteContent.contact.phone}`} className="inline-flex min-h-11 items-center transition-colors hover:text-[#d9b979]" data-testid="footer-phone">{siteContent.contact.phone}</a>
             </div>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
-            <div className="flex flex-wrap gap-4 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/65">
-              <a href={siteContent.contact.linkedin} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#d9b979]" data-testid="footer-linkedin">LinkedIn</a>
-              <a href={siteContent.contact.instagram} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#d9b979]" data-testid="footer-instagram">Instagram</a>
-              <a href={siteContent.contact.youtube} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#d9b979]" data-testid="footer-youtube">YouTube</a>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/65">
+              <a href={siteContent.contact.linkedin} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center transition-colors hover:text-[#d9b979]" data-testid="footer-linkedin">LinkedIn</a>
+              <a href={siteContent.contact.instagram} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center transition-colors hover:text-[#d9b979]" data-testid="footer-instagram">Instagram</a>
+              <a href={siteContent.contact.youtube} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center transition-colors hover:text-[#d9b979]" data-testid="footer-youtube">YouTube</a>
             </div>
             <p className="font-mono-custom text-[10px] uppercase tracking-[0.1em] text-[#d6d0c4]/60">Made with stories, curiosity and a little stubbornness.</p>
             <p className="font-mono-custom text-[10px] text-[#d6d0c4]/40">© {new Date().getFullYear()} Oluwadamisola Adeyinka</p>
